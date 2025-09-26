@@ -1,0 +1,194 @@
+'use client';
+
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Shield, Award, Users, Globe, CheckCircle, Star } from 'lucide-react';
+
+const Certifications: React.FC = () => {
+  const certifications = [
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: 'ISO 27001 Certified',
+      description: 'International standard for information security management systems',
+      status: 'Certified',
+      color: 'from-green-500 to-green-600'
+    },
+    {
+      icon: <Award className="w-8 h-8" />,
+      title: 'PMP Certification',
+      description: 'Project Management Professional certification for our operations team',
+      status: 'Certified',
+      color: 'from-blue-500 to-blue-600'
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: 'Microsoft Partner',
+      description: 'Certified Microsoft technology partner for enterprise solutions',
+      status: 'Partner',
+      color: 'from-primary-500 to-primary-600'
+    },
+    {
+      icon: <Globe className="w-8 h-8" />,
+      title: 'AWS Solutions Provider',
+      description: 'Amazon Web Services certified solutions provider',
+      status: 'Certified',
+      color: 'from-orange-500 to-orange-600'
+    }
+  ];
+
+  const partnerships = [
+    {
+      name: 'Microsoft',
+      description: 'Enterprise software and cloud solutions',
+      logo: '/partnerships/microsoft.png' // Placeholder
+    },
+    {
+      name: 'Amazon Web Services',
+      description: 'Cloud infrastructure and services',
+      logo: '/partnerships/aws.png' // Placeholder
+    },
+    {
+      name: 'Cisco',
+      description: 'Network infrastructure and security',
+      logo: '/partnerships/cisco.png' // Placeholder
+    },
+    {
+      name: 'VMware',
+      description: 'Virtualization and cloud computing',
+      logo: '/partnerships/vmware.png' // Placeholder
+    }
+  ];
+
+  return (
+    <section className="py-20 bg-white">
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Certifications & Partnerships
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Our certifications and strategic partnerships ensure we deliver world-class 
+            solutions with the highest standards of quality and security.
+          </p>
+        </motion.div>
+
+        {/* Certifications Grid */}
+        <div className="mb-20">
+          <motion.h3
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-2xl font-bold text-gray-900 mb-8 text-center"
+          >
+            Industry Certifications
+          </motion.h3>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {certifications.map((cert, index) => (
+              <motion.div
+                key={cert.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-gray-50 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow duration-300"
+              >
+                <div className={`w-16 h-16 bg-gradient-to-br ${cert.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
+                  <div className="text-white">
+                    {cert.icon}
+                  </div>
+                </div>
+                
+                <div className="flex items-center justify-center mb-2">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+                  <span className="text-sm font-semibold text-green-600">{cert.status}</span>
+                </div>
+                
+                <h4 className="text-lg font-bold text-gray-900 mb-2">{cert.title}</h4>
+                <p className="text-gray-600 text-sm leading-relaxed">{cert.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Strategic Partnerships */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="bg-gradient-to-br from-gray-50 to-primary-50 rounded-3xl p-8 md:p-12"
+        >
+          <div className="text-center mb-12">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+              Strategic Technology Partnerships
+            </h3>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              We partner with leading technology companies to provide our clients 
+              with cutting-edge solutions and comprehensive support.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {partnerships.map((partner, index) => (
+              <motion.div
+                key={partner.name}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-white rounded-2xl p-6 text-center shadow-md hover:shadow-lg transition-shadow duration-300"
+              >
+                {/* Placeholder for partner logo */}
+                <div className="w-16 h-16 bg-gray-200 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-gray-400">
+                    {partner.name.charAt(0)}
+                  </span>
+                </div>
+                <h4 className="font-bold text-gray-900 mb-2">{partner.name}</h4>
+                <p className="text-sm text-gray-600">{partner.description}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Partnership Benefits */}
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-12 h-12 bg-primary-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <Star className="w-6 h-6 text-white" />
+              </div>
+              <h4 className="font-bold text-gray-900 mb-2">Premium Support</h4>
+              <p className="text-gray-600 text-sm">Direct access to vendor support and latest updates</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-12 h-12 bg-secondary-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <Award className="w-6 h-6 text-white" />
+              </div>
+              <h4 className="font-bold text-gray-900 mb-2">Certified Expertise</h4>
+              <p className="text-gray-600 text-sm">Trained and certified professionals on all platforms</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-12 h-12 bg-accent-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <CheckCircle className="w-6 h-6 text-white" />
+              </div>
+              <h4 className="font-bold text-gray-900 mb-2">Quality Assurance</h4>
+              <p className="text-gray-600 text-sm">Guaranteed compatibility and performance standards</p>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default Certifications;
