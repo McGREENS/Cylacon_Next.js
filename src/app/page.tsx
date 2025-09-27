@@ -9,7 +9,7 @@ import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import FAQStructuredData, { itServicesFAQs } from '@/components/seo/FAQStructuredData';
 
 export const metadata: Metadata = {
-  title: 'CyLaCon | #1 IT Solutions Provider in Rwanda | Web Development, Cybersecurity & Cloud Solutions Kigali',
+  title: 'CyLaCon | 1st IT Solutions Provider in Rwanda | Web Development, Cybersecurity & Cloud Solutions Kigali',
   description: 'Transform your business with CyLaCon\'s innovative IT solutions in Rwanda. Expert web development, cybersecurity, cloud solutions, and custom software development in Kigali, East Africa. ISO 27001 certified with 150+ successful projects. Call +250780115764 for free consultation.',
   keywords: 'IT solutions Rwanda, web development Kigali, cybersecurity Rwanda, cloud solutions East Africa, custom software development Rwanda, IT consulting Kigali, digital transformation Rwanda, technology partner East Africa, CyLaCon Rwanda, IT company Kigali, software development Rwanda, network infrastructure Kigali, enterprise IT solutions Rwanda, business automation Kigali',
   authors: [{ name: 'CyLaCon' }],
