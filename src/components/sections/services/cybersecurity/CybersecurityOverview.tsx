@@ -93,7 +93,7 @@ const CybersecurityOverview: React.FC<CybersecurityOverviewProps> = ({ service }
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Comprehensive Cybersecurity Solutions
+            Comprehensive <span className="gradient-text">Cybersecurity</span> Solutions
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             {service.description}. In today's digital landscape, cybersecurity isn't optional - 
@@ -112,7 +112,7 @@ const CybersecurityOverview: React.FC<CybersecurityOverviewProps> = ({ service }
           <div className="text-center mb-8">
             <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              The Growing Cyber Threat Landscape in Rwanda
+              The Growing Cyber Threat Landscape in <span className="gradient-text">Rwanda</span>
             </h3>
             <p className="text-gray-700 max-w-2xl mx-auto">
               As Rwanda's digital economy grows, so do the cyber threats. Businesses face increasing 
@@ -150,18 +150,19 @@ const CybersecurityOverview: React.FC<CybersecurityOverviewProps> = ({ service }
             transition={{ duration: 0.6 }}
             className="text-2xl font-bold text-gray-900 mb-12 text-center"
           >
-            What We Can Do for Your Business
+            What We Can Do for Your <span className="gradient-text">Business</span>
           </motion.h3>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {securityServices.map((service, index) => (
               <motion.div
                 key={service.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30, scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 group"
+                transition={{ duration: 0.8, delay: index * 0.1, type: "spring", stiffness: 100 }}
+                whileHover={{ scale: 1.05, y: -8 }}
+                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 group border border-transparent hover:border-primary-200"
               >
                 <div className="w-14 h-14 bg-primary-100 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-primary-200 transition-colors duration-300">
                   <div className="text-primary-600 group-hover:scale-110 transition-transform duration-300">
@@ -185,7 +186,7 @@ const CybersecurityOverview: React.FC<CybersecurityOverviewProps> = ({ service }
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Why Choose CyLaCon for Cybersecurity?
+              Why Choose <span className="gradient-text">CyLaCon</span> for Cybersecurity?
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               We're not just another cybersecurity company - we're Rwanda's trusted security partners 

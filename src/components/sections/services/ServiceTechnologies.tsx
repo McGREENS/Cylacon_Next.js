@@ -82,7 +82,7 @@ const ServiceTechnologies: React.FC<ServiceTechnologiesProps> = ({ service }) =>
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Technologies We Use
+            Technologies We <span className="gradient-text">Use</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             We leverage the latest and most reliable technologies to build websites that are 
@@ -113,7 +113,8 @@ const ServiceTechnologies: React.FC<ServiceTechnologiesProps> = ({ service }) =>
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: techIndex * 0.05 }}
-                    className="bg-gray-50 rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300 group hover:bg-white"
+                    whileHover={{ scale: 1.05, y: -5 }}
+                    className="bg-gray-50 rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300 group hover:bg-white border border-transparent hover:border-primary-200"
                   >
                     <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">
                       {tech.logo}
@@ -137,7 +138,7 @@ const ServiceTechnologies: React.FC<ServiceTechnologiesProps> = ({ service }) =>
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Why We Choose These Technologies
+              Why We Choose These <span className="gradient-text">Technologies</span>
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Our technology choices are based on reliability, performance, and long-term maintainability
@@ -197,7 +198,7 @@ const ServiceTechnologies: React.FC<ServiceTechnologiesProps> = ({ service }) =>
         >
           <div className="bg-white rounded-3xl p-8 shadow-lg">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Optimized for Rwanda & East Africa
+              Optimized for <span className="gradient-text">Rwanda & East Africa</span>
             </h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
               We understand the unique challenges of the Rwandan market and optimize our 

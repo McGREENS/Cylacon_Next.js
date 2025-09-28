@@ -71,7 +71,7 @@ const Certifications: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Certifications & Partnerships
+            Certifications & <span className="gradient-text">Partnerships</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Our certifications and strategic partnerships ensure we deliver world-class 
@@ -88,18 +88,19 @@ const Certifications: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="text-2xl font-bold text-gray-900 mb-8 text-center"
           >
-            Industry Certifications
+            Industry <span className="gradient-text">Certifications</span>
           </motion.h3>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {certifications.map((cert, index) => (
               <motion.div
                 key={cert.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30, scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-gray-50 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow duration-300"
+                transition={{ duration: 0.8, delay: index * 0.1, type: "spring", stiffness: 100 }}
+                whileHover={{ scale: 1.05, y: -5 }}
+                className="bg-gray-50 rounded-2xl p-6 text-center hover:shadow-xl transition-all duration-500 border border-transparent hover:border-primary-200"
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${cert.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
                   <div className="text-white">
@@ -129,7 +130,7 @@ const Certifications: React.FC = () => {
         >
           <div className="text-center mb-12">
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-              Strategic Technology Partnerships
+              Strategic Technology <span className="gradient-text">Partnerships</span>
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               We partner with leading technology companies to provide our clients 

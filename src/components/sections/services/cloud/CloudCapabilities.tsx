@@ -35,7 +35,7 @@ const CloudCapabilities: React.FC = () => {
     {
       category: 'Microsoft Azure',
       icon: <Server className="w-8 h-8" />,
-      color: 'from-blue-500 to-blue-600',
+      color: 'from-secondary-500 to-secondary-600',
       capabilities: [
         'Azure Virtual Machines & Scale Sets',
         'Azure Storage & Blob Services',
@@ -61,7 +61,7 @@ const CloudCapabilities: React.FC = () => {
     {
       category: 'Hybrid & Multi-Cloud',
       icon: <Globe className="w-8 h-8" />,
-      color: 'from-purple-500 to-purple-600',
+      color: 'from-accent-500 to-accent-600',
       capabilities: [
         'Multi-cloud architecture design',
         'Hybrid cloud connectivity',
@@ -147,7 +147,7 @@ const CloudCapabilities: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Our Cloud Platform Expertise
+            Our Cloud Platform <span className="gradient-text">Expertise</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             We're certified experts across all major cloud platforms, providing you with the flexibility 
@@ -197,7 +197,7 @@ const CloudCapabilities: React.FC = () => {
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Comprehensive Cloud Services
+              Comprehensive Cloud <span className="gradient-text">Services</span>
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               From strategy to implementation, we provide end-to-end cloud services 
@@ -248,7 +248,7 @@ const CloudCapabilities: React.FC = () => {
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Cloud Solutions Tailored for Rwanda
+              Cloud Solutions Tailored for <span className="gradient-text">Rwanda</span>
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               We understand Rwanda's unique business environment and provide cloud solutions 
@@ -287,7 +287,7 @@ const CloudCapabilities: React.FC = () => {
           className="mt-20 text-center"
         >
           <h3 className="text-2xl font-bold text-gray-900 mb-8">
-            Our Cloud Certifications & Partnerships
+            Our Cloud <span className="gradient-text">Certifications</span> & Partnerships
           </h3>
           <div className="flex flex-wrap justify-center gap-8">
             {[

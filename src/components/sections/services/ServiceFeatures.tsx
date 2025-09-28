@@ -113,7 +113,7 @@ const ServiceFeatures: React.FC<ServiceFeaturesProps> = ({ service }) => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Our Web Development Capabilities
+            Our Web Development <span className="gradient-text">Capabilities</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             From simple business websites to complex web applications, we have the expertise 
@@ -126,11 +126,12 @@ const ServiceFeatures: React.FC<ServiceFeaturesProps> = ({ service }) => {
           {webDevCapabilities.map((capability, index) => (
             <motion.div
               key={capability.category}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30, scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="bg-gray-50 rounded-3xl p-8 hover:shadow-lg transition-shadow duration-300"
+              transition={{ duration: 0.8, delay: index * 0.1, type: "spring", stiffness: 100 }}
+              whileHover={{ scale: 1.02, y: -5 }}
+              className="bg-gray-50 rounded-3xl p-8 hover:shadow-xl transition-all duration-500 border border-transparent hover:border-primary-200"
             >
               <div className="flex items-center mb-6">
                 <div className={`w-16 h-16 bg-gradient-to-br ${capability.color} rounded-2xl flex items-center justify-center mr-4`}>
@@ -163,7 +164,7 @@ const ServiceFeatures: React.FC<ServiceFeaturesProps> = ({ service }) => {
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Built for Success in Rwanda's Digital Market
+              Built for Success in Rwanda's <span className="gradient-text">Digital Market</span>
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Every website we develop is optimized for the Rwandan market, with features 
@@ -202,7 +203,7 @@ const ServiceFeatures: React.FC<ServiceFeaturesProps> = ({ service }) => {
           className="mt-20 text-center"
         >
           <h3 className="text-2xl font-bold text-gray-900 mb-8">
-            Industries We Serve in Rwanda
+            Industries We Serve in <span className="gradient-text">Rwanda</span>
           </h3>
           <div className="flex flex-wrap justify-center gap-4">
             {[

@@ -6,6 +6,7 @@ import HealthcareSolutions from '@/components/sections/solutions/healthcare/Heal
 import HealthcareTechnology from '@/components/sections/solutions/healthcare/HealthcareTechnology';
 import HealthcareCompliance from '@/components/sections/solutions/healthcare/HealthcareCompliance';
 import CallToAction from '@/components/sections/CallToAction';
+import SectionTransition from '@/components/ui/SectionTransition';
 
 const healthcareSolution = {
   name: 'Healthcare IT Solutions',
@@ -125,22 +126,32 @@ export default function HealthcarePage() {
           title="Digital Healthcare Transformation for Rwanda"
           subtitle="Empower healthcare providers with cutting-edge IT solutions that improve patient care, enhance operational efficiency, and drive better health outcomes across Rwanda."
           backgroundImage="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080"
-          service="Healthcare IT Solutions"
+          service="healthcare"
         />
+        
+        <SectionTransition variant="wave" />
         
         {/* Healthcare Overview */}
         <HealthcareOverview 
           solution={healthcareSolution}
         />
         
+        <SectionTransition variant="curve" />
+        
         {/* Healthcare Solutions */}
         <HealthcareSolutions />
+        
+        <SectionTransition variant="diagonal" />
         
         {/* Healthcare Technology */}
         <HealthcareTechnology />
         
+        <SectionTransition variant="wave" />
+        
         {/* Healthcare Compliance */}
         <HealthcareCompliance />
+        
+        <SectionTransition variant="curve" />
         
         {/* Call to Action */}
         <CallToAction />

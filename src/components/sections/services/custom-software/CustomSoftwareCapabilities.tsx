@@ -20,7 +20,7 @@ const CustomSoftwareCapabilities: React.FC = () => {
     {
       category: 'Web Applications',
       icon: <Globe className="w-8 h-8" />,
-      color: 'from-blue-500 to-blue-600',
+      color: 'from-secondary-500 to-secondary-600',
       backgroundImage: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400',
       capabilities: [
         'Progressive Web Applications (PWA)',
@@ -48,7 +48,7 @@ const CustomSoftwareCapabilities: React.FC = () => {
     {
       category: 'Enterprise Software',
       icon: <Database className="w-8 h-8" />,
-      color: 'from-purple-500 to-purple-600',
+      color: 'from-accent-500 to-accent-600',
       backgroundImage: 'https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400',
       capabilities: [
         'ERP Systems',
@@ -126,7 +126,7 @@ const CustomSoftwareCapabilities: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Our Software Development Capabilities
+            Our Software Development <span className="gradient-text">Capabilities</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             From concept to deployment, we have the expertise to build any type of software solution 
@@ -188,7 +188,7 @@ const CustomSoftwareCapabilities: React.FC = () => {
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Technical Expertise & Technologies
+              Technical <span className="gradient-text">Expertise</span> & Technologies
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               We stay current with the latest technologies and best practices to deliver 
@@ -240,7 +240,7 @@ const CustomSoftwareCapabilities: React.FC = () => {
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Solutions Tailored for Rwanda's Market
+              Solutions Tailored for <span className="gradient-text">Rwanda's Market</span>
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               We understand Rwanda's unique business environment and build software solutions 

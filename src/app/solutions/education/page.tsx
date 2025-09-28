@@ -6,6 +6,7 @@ import EducationSolutions from '@/components/sections/solutions/education/Educat
 import EdTechSolutions from '@/components/sections/solutions/education/EdTechSolutions';
 import EducationCompliance from '@/components/sections/solutions/education/EducationCompliance';
 import CallToAction from '@/components/sections/CallToAction';
+import SectionTransition from '@/components/ui/SectionTransition';
 
 const educationSolution = {
   name: 'Education IT Solutions',
@@ -125,22 +126,32 @@ export default function EducationPage() {
           title="Digital Education Transformation for Rwanda"
           subtitle="Empower educational institutions with innovative IT solutions that enhance learning outcomes, improve administration, and prepare students for the digital future."
           backgroundImage="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080"
-          service="Education IT Solutions"
+          service="education"
         />
+        
+        <SectionTransition variant="wave" />
         
         {/* Education Overview */}
         <EducationOverview 
           solution={educationSolution}
         />
         
+        <SectionTransition variant="curve" />
+        
         {/* Education Solutions */}
         <EducationSolutions />
+        
+        <SectionTransition variant="diagonal" />
         
         {/* EdTech Solutions */}
         <EdTechSolutions />
         
+        <SectionTransition variant="wave" />
+        
         {/* Education Compliance */}
         <EducationCompliance />
+        
+        <SectionTransition variant="curve" />
         
         {/* Call to Action */}
         <CallToAction />

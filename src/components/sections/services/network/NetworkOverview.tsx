@@ -102,11 +102,11 @@ const NetworkOverview: React.FC<NetworkOverviewProps> = ({ service }) => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Professional Network Infrastructure for Rwanda
+            Professional <span className="gradient-text">Network Infrastructure</span> for Rwanda
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             {service.description}. We design, install, and manage enterprise-grade network 
@@ -119,13 +119,13 @@ const NetworkOverview: React.FC<NetworkOverviewProps> = ({ service }) => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-8 md:p-12 mb-16 border border-blue-100"
+          transition={{ duration: 0.8, delay: 0.2, type: "spring", stiffness: 100 }}
+          className="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-3xl p-8 md:p-12 mb-16 border border-primary-100"
         >
           <div className="text-center mb-8">
-            <Network className="w-16 h-16 text-blue-500 mx-auto mb-4" />
+            <Network className="w-16 h-16 text-primary-500 mx-auto mb-4" />
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Rwanda's Network Infrastructure Transformation
+              Rwanda's <span className="gradient-text">Network Infrastructure</span> Transformation
             </h3>
             <p className="text-gray-700 max-w-2xl mx-auto">
               As Rwanda becomes a digital hub in East Africa, businesses need robust network 
@@ -136,7 +136,7 @@ const NetworkOverview: React.FC<NetworkOverviewProps> = ({ service }) => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {rwandaNetworkStats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">{stat.number}</div>
+                <div className="text-3xl font-bold text-primary-600 mb-2">{stat.number}</div>
                 <div className="text-gray-700 font-medium">{stat.label}</div>
                 <div className="text-sm text-gray-600">{stat.description}</div>
               </div>
@@ -153,7 +153,7 @@ const NetworkOverview: React.FC<NetworkOverviewProps> = ({ service }) => {
             transition={{ duration: 0.6 }}
             className="text-2xl font-bold text-gray-900 mb-12 text-center"
           >
-            Comprehensive Network Infrastructure Services
+            Comprehensive <span className="gradient-text">Network Infrastructure</span> Services
           </motion.h3>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -163,8 +163,8 @@ const NetworkOverview: React.FC<NetworkOverviewProps> = ({ service }) => {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 group"
+                transition={{ duration: 0.8, delay: index * 0.1, type: "spring", stiffness: 100 }}
+                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105 hover:-translate-y-2 border border-transparent hover:border-primary-200"
               >
                 <div className="w-14 h-14 bg-primary-100 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-primary-200 transition-colors duration-300">
                   <div className="text-primary-600 group-hover:scale-110 transition-transform duration-300">
@@ -183,12 +183,12 @@ const NetworkOverview: React.FC<NetworkOverviewProps> = ({ service }) => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8, delay: 0.4, type: "spring", stiffness: 100 }}
           className="bg-white rounded-3xl p-8 md:p-12 shadow-lg"
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Why Choose CyLaCon for Network Infrastructure?
+              Why Choose <span className="gradient-text">CyLaCon</span> for Network Infrastructure?
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Our certified network engineers bring years of experience and industry best practices 
@@ -224,11 +224,11 @@ const NetworkOverview: React.FC<NetworkOverviewProps> = ({ service }) => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.8, delay: 0.6, type: "spring", stiffness: 100 }}
           className="mt-20 bg-gradient-to-br from-primary-600 to-secondary-600 rounded-3xl p-8 md:p-12 text-white"
         >
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold mb-4">Enterprise Network Technologies</h3>
+            <h3 className="text-3xl font-bold mb-4">Enterprise <span className="text-primary-200">Network Technologies</span></h3>
             <p className="text-primary-100 text-lg">
               We work with leading network technology brands to deliver reliable, 
               high-performance infrastructure solutions.

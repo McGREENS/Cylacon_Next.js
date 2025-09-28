@@ -36,7 +36,7 @@ const ConsultingServices: React.FC = () => {
         'Reduced implementation risks',
         'Faster time-to-market'
       ],
-      color: 'from-blue-500 to-blue-600'
+      color: 'from-primary-500 to-primary-600'
     },
     {
       icon: <BarChart3 className="w-8 h-8" />,
@@ -55,7 +55,7 @@ const ConsultingServices: React.FC = () => {
         'Cost reduction opportunities',
         'Performance optimization'
       ],
-      color: 'from-green-500 to-green-600'
+      color: 'from-secondary-500 to-secondary-600'
     },
     {
       icon: <Settings className="w-8 h-8" />,
@@ -74,7 +74,7 @@ const ConsultingServices: React.FC = () => {
         'Enhanced performance',
         'Future-proof architecture'
       ],
-      color: 'from-purple-500 to-purple-600'
+      color: 'from-accent-500 to-accent-600'
     },
     {
       icon: <Shield className="w-8 h-8" />,
@@ -93,7 +93,7 @@ const ConsultingServices: React.FC = () => {
         'Reduced security risks',
         'Improved incident response'
       ],
-      color: 'from-red-500 to-red-600'
+      color: 'from-primary-600 to-secondary-600'
     }
   ];
 
@@ -148,7 +148,7 @@ const ConsultingServices: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Comprehensive IT Consulting Services
+            Comprehensive <span className="gradient-text">IT Consulting</span> Services
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             From strategy development to implementation guidance, we provide end-to-end consulting 
@@ -164,8 +164,8 @@ const ConsultingServices: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+              transition={{ duration: 0.8, delay: index * 0.1, type: "spring", stiffness: 100 }}
+              className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:-translate-y-2 border border-transparent hover:border-primary-200"
             >
               {/* Background Image Header */}
               <div className={`h-48 bg-gradient-to-br ${area.color} relative overflow-hidden`}>
@@ -229,7 +229,7 @@ const ConsultingServices: React.FC = () => {
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Industry-Specific Consulting Expertise
+              Industry-Specific <span className="gradient-text">Consulting Expertise</span>
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               We understand that every industry has unique technology challenges and requirements. 
@@ -276,7 +276,7 @@ const ConsultingServices: React.FC = () => {
           className="mt-20 bg-gradient-to-br from-primary-600 to-secondary-600 rounded-3xl p-8 md:p-12 text-white text-center"
         >
           <Globe className="w-16 h-16 mx-auto mb-6 text-primary-200" />
-          <h3 className="text-3xl font-bold mb-4">Rwanda & East Africa Market Expertise</h3>
+          <h3 className="text-3xl font-bold mb-4">Rwanda & <span className="text-primary-200">East Africa</span> Market Expertise</h3>
           <p className="text-primary-100 text-lg mb-8 max-w-2xl mx-auto">
             Our deep understanding of Rwanda's business environment, regulatory landscape, 
             and market dynamics ensures our consulting advice is practical and actionable.

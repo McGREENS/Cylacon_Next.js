@@ -106,7 +106,7 @@ const HospitalityOverview: React.FC<HospitalityOverviewProps> = ({ solution }) =
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Transforming Hospitality in Rwanda
+            Transforming <span className="gradient-text">Hospitality</span> in Rwanda
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             {solution.description}. We help hospitality businesses across Rwanda leverage technology 
@@ -120,12 +120,12 @@ const HospitalityOverview: React.FC<HospitalityOverviewProps> = ({ solution }) =
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 md:p-12 mb-16 border border-blue-100"
+          className="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-3xl p-8 md:p-12 mb-16 border border-primary-100"
         >
           <div className="text-center mb-8">
-            <Hotel className="w-16 h-16 text-green-500 mx-auto mb-4" />
+            <Hotel className="w-16 h-16 text-primary-500 mx-auto mb-4" />
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Rwanda's Tourism & Hospitality Growth
+              Rwanda's <span className="gradient-text">Tourism & Hospitality</span> Growth
             </h3>
             <p className="text-gray-700 max-w-2xl mx-auto">
               Rwanda has emerged as a premier destination in East Africa, known for its stunning landscapes, 
@@ -137,7 +137,7 @@ const HospitalityOverview: React.FC<HospitalityOverviewProps> = ({ solution }) =
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {rwandaTourismStats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-3xl font-bold text-green-600 mb-2">{stat.number}</div>
+                <div className="text-3xl font-bold text-primary-600 mb-2">{stat.number}</div>
                 <div className="text-gray-700 font-medium">{stat.label}</div>
                 <div className="text-sm text-gray-600">{stat.description}</div>
               </div>
@@ -154,21 +154,22 @@ const HospitalityOverview: React.FC<HospitalityOverviewProps> = ({ solution }) =
             transition={{ duration: 0.6 }}
             className="text-2xl font-bold text-gray-900 mb-12 text-center"
           >
-            Comprehensive Hospitality IT Solutions
+            Comprehensive <span className="gradient-text">Hospitality IT Solutions</span>
           </motion.h3>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {hospitalityServices.map((service, index) => (
               <motion.div
                 key={service.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30, scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 group"
+                transition={{ duration: 0.8, delay: index * 0.1, type: "spring", stiffness: 100 }}
+                whileHover={{ scale: 1.05, y: -8 }}
+                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 group border border-transparent hover:border-primary-200"
               >
-                <div className="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-green-200 transition-colors duration-300">
-                  <div className="text-green-600 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-14 h-14 bg-primary-100 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-primary-200 transition-colors duration-300">
+                  <div className="text-primary-600 group-hover:scale-110 transition-transform duration-300">
                     {service.icon}
                   </div>
                 </div>
@@ -189,7 +190,7 @@ const HospitalityOverview: React.FC<HospitalityOverviewProps> = ({ solution }) =
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Why Choose CyLaCon for Hospitality IT?
+              Why Choose <span className="gradient-text">CyLaCon</span> for Hospitality IT?
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Our hospitality IT solutions are designed specifically for Rwanda's tourism landscape, 
@@ -207,12 +208,12 @@ const HospitalityOverview: React.FC<HospitalityOverviewProps> = ({ solution }) =
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center group"
               >
-                <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-200 transition-colors duration-300">
-                  <div className="text-blue-600 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 bg-secondary-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-secondary-200 transition-colors duration-300">
+                  <div className="text-secondary-600 group-hover:scale-110 transition-transform duration-300">
                     {benefit.icon}
                   </div>
                 </div>
-                <div className="text-2xl font-bold text-green-600 mb-2">{benefit.stat}</div>
+                <div className="text-2xl font-bold text-primary-600 mb-2">{benefit.stat}</div>
                 <h4 className="text-lg font-bold text-gray-900 mb-3">{benefit.title}</h4>
                 <p className="text-gray-600 leading-relaxed text-sm">{benefit.description}</p>
               </motion.div>
@@ -226,11 +227,11 @@ const HospitalityOverview: React.FC<HospitalityOverviewProps> = ({ solution }) =
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt-20 bg-gradient-to-br from-green-600 to-blue-600 rounded-3xl p-8 md:p-12 text-white"
+          className="mt-20 bg-gradient-to-br from-primary-600 to-secondary-600 rounded-3xl p-8 md:p-12 text-white"
         >
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold mb-4">Hospitality Technology Stack</h3>
-            <p className="text-green-100 text-lg">
+            <h3 className="text-3xl font-bold mb-4"><span className="gradient-text">Technology Stack</span></h3>
+            <p className="text-primary-100 text-lg">
               We implement hospitality IT solutions using industry-leading technologies and 
               platforms to ensure reliability, scalability, and exceptional guest experiences.
             </p>

@@ -23,7 +23,7 @@ const CloudSecurity: React.FC = () => {
     {
       layer: 'Identity & Access Management',
       icon: <Key className="w-8 h-8" />,
-      color: 'from-blue-500 to-blue-600',
+      color: 'from-secondary-500 to-secondary-600',
       description: 'Control who can access your cloud resources and what they can do',
       capabilities: [
         'Multi-factor authentication (MFA)',
@@ -51,7 +51,7 @@ const CloudSecurity: React.FC = () => {
     {
       layer: 'Network Security',
       icon: <Wifi className="w-8 h-8" />,
-      color: 'from-purple-500 to-purple-600',
+      color: 'from-accent-500 to-accent-600',
       description: 'Secure your cloud network infrastructure and communications',
       capabilities: [
         'Virtual private clouds (VPC)',
@@ -171,7 +171,7 @@ const CloudSecurity: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Comprehensive Cloud Security Solutions
+            Comprehensive Cloud <span className="gradient-text">Security</span> Solutions
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Protect your cloud infrastructure with enterprise-grade security measures. We implement 
@@ -190,7 +190,7 @@ const CloudSecurity: React.FC = () => {
           <div className="text-center mb-8">
             <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Cloud Security Threats Are Real and Growing
+              Cloud Security <span className="gradient-text">Threats</span> Are Real and Growing
             </h3>
             <p className="text-gray-700 max-w-2xl mx-auto">
               As more businesses move to the cloud, cybercriminals are adapting their tactics. 
@@ -255,7 +255,7 @@ const CloudSecurity: React.FC = () => {
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Our Cloud Security Services
+              Our Cloud Security <span className="gradient-text">Services</span>
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               From assessment to ongoing monitoring, we provide comprehensive cloud security services 
@@ -303,7 +303,7 @@ const CloudSecurity: React.FC = () => {
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Cloud Compliance & Standards
+              Cloud <span className="gradient-text">Compliance</span> & Standards
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               We help you achieve and maintain compliance with international and local standards, 

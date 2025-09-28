@@ -6,6 +6,7 @@ import HospitalitySolutions from '@/components/sections/solutions/hospitality/Ho
 import HospitalityTechnology from '@/components/sections/solutions/hospitality/HospitalityTechnology';
 import HospitalitySecurity from '@/components/sections/solutions/hospitality/HospitalitySecurity';
 import CallToAction from '@/components/sections/CallToAction';
+import SectionTransition from '@/components/ui/SectionTransition';
 
 const hospitalitySolution = {
   name: 'Hospitality IT Solutions',
@@ -125,22 +126,32 @@ export default function HospitalityPage() {
           title="Digital Hospitality Transformation for Rwanda"
           subtitle="Empower your hospitality business with innovative IT solutions that enhance guest experiences, streamline operations, and drive growth in Rwanda's thriving tourism sector."
           backgroundImage="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080"
-          service="Hospitality IT Solutions"
+          service="hospitality"
         />
+        
+        <SectionTransition variant="wave" color="gray" />
         
         {/* Hospitality Overview */}
         <HospitalityOverview 
           solution={hospitalitySolution}
         />
         
+        <SectionTransition variant="curve" color="white" />
+        
         {/* Hospitality Solutions */}
         <HospitalitySolutions />
+        
+        <SectionTransition variant="diagonal" color="gray" />
         
         {/* Hospitality Technology */}
         <HospitalityTechnology />
         
+        <SectionTransition variant="wave" color="white" />
+        
         {/* Hospitality Security */}
         <HospitalitySecurity />
+        
+        <SectionTransition variant="curve" color="primary" />
         
         {/* Call to Action */}
         <CallToAction />

@@ -6,6 +6,7 @@ import CustomSoftwareCapabilities from '@/components/sections/services/custom-so
 import CustomSoftwareProcess from '@/components/sections/services/custom-software/CustomSoftwareProcess';
 import CustomSoftwareSolutions from '@/components/sections/services/custom-software/CustomSoftwareSolutions';
 import CallToAction from '@/components/sections/CallToAction';
+import SectionTransition from '@/components/ui/SectionTransition';
 
 const customSoftwareService = {
   name: 'Custom Software Development',
@@ -125,22 +126,32 @@ export default function CustomSoftwarePage() {
           title="Custom Software Development for Rwanda's Digital Future"
           subtitle="Transform your business with bespoke software solutions designed specifically for your unique needs and processes."
           backgroundImage="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080"
-          service="Custom Software Development"
+          service="custom-software"
         />
+        
+        <SectionTransition variant="wave" color="gray" />
         
         {/* Service Overview */}
         <CustomSoftwareOverview 
           service={customSoftwareService}
         />
         
+        <SectionTransition variant="curve" color="white" />
+        
         {/* Software Capabilities */}
         <CustomSoftwareCapabilities />
+        
+        <SectionTransition variant="diagonal" color="gray" />
         
         {/* Development Process */}
         <CustomSoftwareProcess />
         
+        <SectionTransition variant="wave" color="white" />
+        
         {/* Software Solutions */}
         <CustomSoftwareSolutions />
+        
+        <SectionTransition variant="curve" color="primary" />
         
         {/* Call to Action */}
         <CallToAction />

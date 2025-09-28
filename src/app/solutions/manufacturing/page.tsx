@@ -6,6 +6,7 @@ import ManufacturingSolutions from '@/components/sections/solutions/manufacturin
 import Industry4Solutions from '@/components/sections/solutions/manufacturing/Industry4Solutions';
 import ManufacturingSecurity from '@/components/sections/solutions/manufacturing/ManufacturingSecurity';
 import CallToAction from '@/components/sections/CallToAction';
+import SectionTransition from '@/components/ui/SectionTransition';
 
 const manufacturingSolution = {
   name: 'Manufacturing IT Solutions',
@@ -125,22 +126,32 @@ export default function ManufacturingPage() {
           title="Smart Manufacturing Transformation for Rwanda"
           subtitle="Empower your manufacturing operations with cutting-edge IT solutions that drive efficiency, enhance quality, and accelerate Rwanda's industrial development through Industry 4.0 adoption."
           backgroundImage="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080"
-          service="Manufacturing IT Solutions"
+          service="manufacturing"
         />
+        
+        <SectionTransition variant="wave" />
         
         {/* Manufacturing Overview */}
         <ManufacturingOverview 
           solution={manufacturingSolution}
         />
         
+        <SectionTransition variant="curve" />
+        
         {/* Manufacturing Solutions */}
         <ManufacturingSolutions />
+        
+        <SectionTransition variant="diagonal" />
         
         {/* Industry 4.0 Solutions */}
         <Industry4Solutions />
         
+        <SectionTransition variant="wave" />
+        
         {/* Manufacturing Security */}
         <ManufacturingSecurity />
+        
+        <SectionTransition variant="curve" />
         
         {/* Call to Action */}
         <CallToAction />

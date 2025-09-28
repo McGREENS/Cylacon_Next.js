@@ -22,7 +22,7 @@ const HealthcareCompliance: React.FC = () => {
     {
       standard: 'HIPAA Compliance',
       icon: <Shield className="w-8 h-8" />,
-      color: 'from-blue-500 to-blue-600',
+      color: 'from-primary-500 to-primary-600',
       description: 'Comprehensive HIPAA compliance for patient data protection and privacy.',
       requirements: [
         'Administrative safeguards',
@@ -40,7 +40,7 @@ const HealthcareCompliance: React.FC = () => {
     {
       standard: 'ISO 27001 Healthcare',
       icon: <Lock className="w-8 h-8" />,
-      color: 'from-green-500 to-green-600',
+      color: 'from-secondary-500 to-secondary-600',
       description: 'Information security management system specifically for healthcare organizations.',
       requirements: [
         'Information security policies',
@@ -58,7 +58,7 @@ const HealthcareCompliance: React.FC = () => {
     {
       standard: 'Rwanda Health Data Protection',
       icon: <FileText className="w-8 h-8" />,
-      color: 'from-purple-500 to-purple-600',
+      color: 'from-accent-500 to-accent-600',
       description: 'Compliance with Rwanda\'s health data protection laws and regulations.',
       requirements: [
         'Local data residency',
@@ -76,7 +76,7 @@ const HealthcareCompliance: React.FC = () => {
     {
       standard: 'HL7 FHIR Standards',
       icon: <Globe className="w-8 h-8" />,
-      color: 'from-orange-500 to-orange-600',
+      color: 'from-primary-600 to-secondary-600',
       description: 'Healthcare data exchange standards for interoperability and integration.',
       requirements: [
         'FHIR resource implementation',
@@ -155,11 +155,11 @@ const HealthcareCompliance: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Healthcare Compliance & Security
+            <span className="gradient-text">Healthcare Compliance</span> & Security
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Ensure your healthcare IT systems meet all regulatory requirements and security standards. 
@@ -175,8 +175,8 @@ const HealthcareCompliance: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="bg-gray-50 rounded-3xl p-8 hover:shadow-lg transition-shadow duration-300"
+              transition={{ duration: 0.8, delay: index * 0.1, type: "spring", stiffness: 100 }}
+              className="bg-gray-50 rounded-3xl p-8 hover:shadow-lg transition-all duration-300 hover:scale-105 hover:-translate-y-2 border border-transparent hover:border-primary-200"
             >
               <div className="flex items-center mb-6">
                 <div className={`w-16 h-16 bg-gradient-to-br ${standard.color} rounded-2xl flex items-center justify-center mr-4`}>
@@ -197,7 +197,7 @@ const HealthcareCompliance: React.FC = () => {
                 <div className="space-y-2">
                   {standard.requirements.map((requirement, reqIndex) => (
                     <div key={reqIndex} className="flex items-center space-x-2">
-                      <CheckCircle className="w-4 h-4 text-blue-500 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-primary-500 flex-shrink-0" />
                       <span className="text-sm text-gray-600">{requirement}</span>
                     </div>
                   ))}
@@ -210,7 +210,7 @@ const HealthcareCompliance: React.FC = () => {
                 <div className="space-y-2">
                   {standard.benefits.map((benefit, benefitIndex) => (
                     <div key={benefitIndex} className="flex items-center space-x-2">
-                      <Zap className="w-4 h-4 text-green-500 flex-shrink-0" />
+                      <Zap className="w-4 h-4 text-secondary-500 flex-shrink-0" />
                       <span className="text-sm text-gray-600">{benefit}</span>
                     </div>
                   ))}
@@ -225,12 +225,12 @@ const HealthcareCompliance: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8, delay: 0.4, type: "spring", stiffness: 100 }}
           className="bg-gray-50 rounded-3xl p-8 md:p-12 mb-20"
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Healthcare Security Measures
+              <span className="gradient-text">Healthcare Security</span> Measures
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Comprehensive security measures designed specifically for healthcare environments 
@@ -246,10 +246,10 @@ const HealthcareCompliance: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 text-center shadow-md hover:shadow-lg transition-shadow duration-300"
+                className="bg-white rounded-2xl p-6 text-center shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 hover:-translate-y-2 border border-transparent hover:border-primary-200"
               >
-                <div className="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <div className="text-blue-600">
+                <div className="w-14 h-14 bg-primary-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <div className="text-primary-600">
                     {measure.icon}
                   </div>
                 </div>
@@ -258,7 +258,7 @@ const HealthcareCompliance: React.FC = () => {
                 
                 <div className="space-y-1">
                   {measure.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="text-xs text-blue-600 font-medium">
+                    <div key={featureIndex} className="text-xs text-primary-600 font-medium">
                       • {feature}
                     </div>
                   ))}
@@ -273,12 +273,12 @@ const HealthcareCompliance: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.8, delay: 0.6, type: "spring", stiffness: 100 }}
           className="bg-white rounded-3xl p-8 md:p-12 shadow-lg mb-20"
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Our Compliance Implementation Process
+              Our <span className="gradient-text">Compliance Implementation</span> Process
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               We follow a systematic approach to ensure your healthcare organization 
@@ -296,15 +296,15 @@ const HealthcareCompliance: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-green-600">{step.step}</span>
+                <div className="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-secondary-600">{step.step}</span>
                 </div>
                 <h4 className="text-lg font-bold text-gray-900 mb-3">{step.title}</h4>
                 <p className="text-gray-600 text-sm mb-4">{step.description}</p>
                 
                 <div className="space-y-1">
                   {step.deliverables.map((deliverable, deliverableIndex) => (
-                    <div key={deliverableIndex} className="text-xs text-green-600 font-medium">
+                    <div key={deliverableIndex} className="text-xs text-secondary-600 font-medium">
                       • {deliverable}
                     </div>
                   ))}
@@ -319,12 +319,12 @@ const HealthcareCompliance: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="bg-gradient-to-br from-green-600 to-blue-600 rounded-3xl p-8 md:p-12 text-white text-center"
+          transition={{ duration: 0.8, delay: 0.8, type: "spring", stiffness: 100 }}
+          className="bg-gradient-to-br from-secondary-600 to-primary-600 rounded-3xl p-8 md:p-12 text-white text-center"
         >
-          <Award className="w-16 h-16 mx-auto mb-6 text-green-200" />
-          <h3 className="text-3xl font-bold mb-4">Compliance Guarantee</h3>
-          <p className="text-green-100 text-lg mb-8 max-w-2xl mx-auto">
+          <Award className="w-16 h-16 mx-auto mb-6 text-secondary-200" />
+          <h3 className="text-3xl font-bold mb-4"><span className="text-secondary-200">Compliance</span> Guarantee</h3>
+          <p className="text-secondary-100 text-lg mb-8 max-w-2xl mx-auto">
             We guarantee that our healthcare IT solutions meet all applicable compliance requirements. 
             Our ISO 27001 certified team ensures your systems are secure, compliant, and audit-ready.
           </p>
@@ -332,31 +332,31 @@ const HealthcareCompliance: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div className="text-center">
               <div className="text-3xl font-bold mb-2">100%</div>
-              <div className="text-green-200">Compliance Rate</div>
-              <div className="text-sm text-green-100">All implementations pass audits</div>
+              <div className="text-secondary-200">Compliance Rate</div>
+              <div className="text-sm text-secondary-100">All implementations pass audits</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold mb-2">24/7</div>
-              <div className="text-green-200">Security Monitoring</div>
-              <div className="text-sm text-green-100">Continuous compliance monitoring</div>
+              <div className="text-secondary-200">Security Monitoring</div>
+              <div className="text-sm text-secondary-100">Continuous compliance monitoring</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold mb-2">Zero</div>
-              <div className="text-green-200">Data Breaches</div>
-              <div className="text-sm text-green-100">Perfect security track record</div>
+              <div className="text-secondary-200">Data Breaches</div>
+              <div className="text-sm text-secondary-100">Perfect security track record</div>
             </div>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="/consultation"
-              className="inline-flex items-center justify-center px-8 py-3 bg-white text-green-600 font-semibold rounded-lg hover:bg-green-50 transition-colors duration-200"
+              className="inline-flex items-center justify-center px-8 py-3 bg-white text-secondary-600 font-semibold rounded-lg hover:bg-secondary-50 transition-colors duration-200"
             >
               Get Compliance Assessment
             </a>
             <a 
               href="tel:+250780115764"
-              className="inline-flex items-center justify-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-green-600 transition-colors duration-200"
+              className="inline-flex items-center justify-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-secondary-600 transition-colors duration-200"
             >
               Call +250 780 115 764
             </a>

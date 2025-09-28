@@ -22,7 +22,7 @@ const NetworkSecurity: React.FC = () => {
     {
       layer: 'Perimeter Security',
       icon: <Shield className="w-8 h-8" />,
-      color: 'from-red-500 to-red-600',
+      color: 'from-primary-500 to-primary-600',
       description: 'First line of defense protecting your network from external threats',
       capabilities: [
         'Next-generation firewalls (NGFW)',
@@ -36,7 +36,7 @@ const NetworkSecurity: React.FC = () => {
     {
       layer: 'Network Access Control',
       icon: <Lock className="w-8 h-8" />,
-      color: 'from-blue-500 to-blue-600',
+      color: 'from-secondary-500 to-secondary-600',
       description: 'Control and monitor who and what can access your network resources',
       capabilities: [
         '802.1X authentication',
@@ -50,7 +50,7 @@ const NetworkSecurity: React.FC = () => {
     {
       layer: 'Network Monitoring',
       icon: <Eye className="w-8 h-8" />,
-      color: 'from-green-500 to-green-600',
+      color: 'from-accent-500 to-accent-600',
       description: 'Continuous monitoring and threat detection across your network',
       capabilities: [
         'Network traffic analysis',
@@ -64,7 +64,7 @@ const NetworkSecurity: React.FC = () => {
     {
       layer: 'Data Protection',
       icon: <Server className="w-8 h-8" />,
-      color: 'from-purple-500 to-purple-600',
+      color: 'from-primary-600 to-secondary-600',
       description: 'Protect sensitive data in transit and at rest across your network',
       capabilities: [
         'Network encryption (IPSec, SSL/TLS)',
@@ -159,11 +159,11 @@ const NetworkSecurity: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Comprehensive Network Security Solutions
+            Comprehensive <span className="gradient-text">Network Security</span> Solutions
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Protect your network infrastructure with multi-layered security solutions that defend 
@@ -176,13 +176,13 @@ const NetworkSecurity: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="bg-gradient-to-br from-red-50 to-orange-50 rounded-3xl p-8 md:p-12 mb-16 border border-red-100"
+          transition={{ duration: 0.8, delay: 0.2, type: "spring", stiffness: 100 }}
+          className="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-3xl p-8 md:p-12 mb-16 border border-primary-100"
         >
           <div className="text-center mb-8">
-            <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />
+            <AlertTriangle className="w-16 h-16 text-primary-500 mx-auto mb-4" />
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Network Security Threats Are Increasing
+              <span className="gradient-text">Network Security</span> Threats Are Increasing
             </h3>
             <p className="text-gray-700 max-w-2xl mx-auto">
               As networks become more complex and connected, the attack surface grows. 
@@ -193,10 +193,10 @@ const NetworkSecurity: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {securityThreats.map((item, index) => (
               <div key={index} className="text-center bg-white rounded-2xl p-6 shadow-md">
-                <div className="text-3xl font-bold text-red-600 mb-2">{item.impact}</div>
+                <div className="text-3xl font-bold text-primary-600 mb-2">{item.impact}</div>
                 <div className="text-gray-700 font-medium mb-2">{item.threat}</div>
                 <div className="text-sm text-gray-600 mb-3">{item.description}</div>
-                <div className="text-xs text-green-600 font-medium">{item.protection}</div>
+                <div className="text-xs text-secondary-600 font-medium">{item.protection}</div>
               </div>
             ))}
           </div>
@@ -210,8 +210,8 @@ const NetworkSecurity: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="bg-gray-50 rounded-3xl p-8 hover:shadow-lg transition-shadow duration-300"
+              transition={{ duration: 0.8, delay: index * 0.1, type: "spring", stiffness: 100 }}
+              className="bg-gray-50 rounded-3xl p-8 hover:shadow-lg transition-all duration-300 hover:scale-105 hover:-translate-y-2 border border-transparent hover:border-primary-200"
             >
               <div className="flex items-center mb-6">
                 <div className={`w-16 h-16 bg-gradient-to-br ${layer.color} rounded-2xl flex items-center justify-center mr-4`}>
@@ -243,12 +243,12 @@ const NetworkSecurity: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8, delay: 0.4, type: "spring", stiffness: 100 }}
           className="bg-gray-50 rounded-3xl p-8 md:p-12 mb-20"
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Network Security Services We Provide
+              <span className="gradient-text">Network Security</span> Services We Provide
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               From assessment to implementation and ongoing monitoring, we provide comprehensive 
@@ -264,7 +264,7 @@ const NetworkSecurity: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 text-center shadow-md hover:shadow-lg transition-shadow duration-300"
+                className="bg-white rounded-2xl p-6 text-center shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 hover:-translate-y-2 border border-transparent hover:border-primary-200"
               >
                 <div className="w-14 h-14 bg-primary-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <div className="text-primary-600">
@@ -291,11 +291,11 @@ const NetworkSecurity: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.8, delay: 0.6, type: "spring", stiffness: 100 }}
           className="bg-gradient-to-br from-primary-600 to-secondary-600 rounded-3xl p-8 md:p-12 text-white text-center"
         >
           <Shield className="w-16 h-16 mx-auto mb-6 text-primary-200" />
-          <h3 className="text-3xl font-bold mb-4">Securing Rwanda's Digital Infrastructure</h3>
+          <h3 className="text-3xl font-bold mb-4">Securing Rwanda's <span className="text-primary-200">Digital Infrastructure</span></h3>
           <p className="text-primary-100 text-lg mb-8 max-w-2xl mx-auto">
             As Rwanda's digital economy grows, network security becomes critical for business success. 
             We provide world-class security solutions tailored to local needs and threats.

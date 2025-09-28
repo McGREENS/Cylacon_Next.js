@@ -6,6 +6,7 @@ import NetworkServices from '@/components/sections/services/network/NetworkServi
 import NetworkSolutions from '@/components/sections/services/network/NetworkSolutions';
 import NetworkSecurity from '@/components/sections/services/network/NetworkSecurity';
 import CallToAction from '@/components/sections/CallToAction';
+import SectionTransition from '@/components/ui/SectionTransition';
 
 const networkService = {
   name: 'Network Infrastructure Services',
@@ -125,22 +126,32 @@ export default function NetworkInfrastructurePage() {
           title="Enterprise Network Infrastructure for Rwanda's Digital Economy"
           subtitle="Build reliable, secure, and scalable network infrastructure that powers your business growth and digital transformation."
           backgroundImage="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080"
-          service="Network Infrastructure Services"
+          service="network-infrastructure"
         />
+        
+        <SectionTransition variant="wave" />
         
         {/* Service Overview */}
         <NetworkOverview 
           service={networkService}
         />
         
+        <SectionTransition variant="curve" />
+        
         {/* Network Services */}
         <NetworkServices />
+        
+        <SectionTransition variant="diagonal" />
         
         {/* Network Solutions */}
         <NetworkSolutions />
         
+        <SectionTransition variant="wave" />
+        
         {/* Network Security */}
         <NetworkSecurity />
+        
+        <SectionTransition variant="curve" />
         
         {/* Call to Action */}
         <CallToAction />

@@ -72,7 +72,7 @@ const CloudServices: React.FC = () => {
         'Reduced operational costs',
         'Better inter-agency collaboration'
       ],
-      color: 'from-blue-500 to-indigo-500'
+      color: 'from-secondary-500 to-secondary-600'
     },
     {
       icon: <GraduationCap className="w-8 h-8" />,
@@ -91,7 +91,7 @@ const CloudServices: React.FC = () => {
         'Streamlined administration',
         'Cost-effective IT management'
       ],
-      color: 'from-purple-500 to-violet-500'
+      color: 'from-accent-500 to-accent-600'
     }
   ];
 
@@ -134,7 +134,7 @@ const CloudServices: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Industry-Specific Cloud Solutions
+            Industry-Specific <span className="gradient-text">Cloud Solutions</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             We understand that every industry has unique requirements. Our cloud solutions are tailored 
@@ -215,7 +215,7 @@ const CloudServices: React.FC = () => {
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Complete Cloud Service Portfolio
+              Complete Cloud Service <span className="gradient-text">Portfolio</span>
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               From infrastructure to applications, we provide comprehensive cloud services 
@@ -263,7 +263,7 @@ const CloudServices: React.FC = () => {
         >
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold mb-4">
-              Cloud Solutions for Small & Medium Enterprises
+              Cloud Solutions for <span className="text-primary-200">Small & Medium Enterprises</span>
             </h3>
             <p className="text-primary-100 text-lg max-w-2xl mx-auto">
               We make enterprise-grade cloud technology accessible to SMEs in Rwanda. 

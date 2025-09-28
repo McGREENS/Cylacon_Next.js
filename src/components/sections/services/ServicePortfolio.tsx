@@ -60,7 +60,7 @@ const ServicePortfolio: React.FC<ServicePortfolioProps> = ({ service }) => {
     switch (category) {
       case 'Healthcare': return 'from-red-500 to-pink-500';
       case 'E-commerce': return 'from-green-500 to-emerald-500';
-      case 'Education': return 'from-blue-500 to-indigo-500';
+      case 'Education': return 'from-primary-500 to-secondary-500';
       case 'Government': return 'from-purple-500 to-violet-500';
       default: return 'from-primary-500 to-secondary-500';
     }
@@ -78,7 +78,7 @@ const ServicePortfolio: React.FC<ServicePortfolioProps> = ({ service }) => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Our Web Development Portfolio
+            Our Web Development <span className="gradient-text">Portfolio</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Explore some of our successful web development projects across various industries in Rwanda. 
@@ -91,11 +91,12 @@ const ServicePortfolio: React.FC<ServicePortfolioProps> = ({ service }) => {
           {portfolioItems.map((item, index) => (
             <motion.div
               key={item.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30, scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group"
+              transition={{ duration: 0.8, delay: index * 0.1, type: "spring", stiffness: 100 }}
+              whileHover={{ scale: 1.02, y: -8 }}
+              className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 group border border-transparent hover:border-primary-200"
             >
               {/* Project Image Placeholder */}
               <div className={`h-48 bg-gradient-to-br ${getCategoryColor(item.category)} relative overflow-hidden`}>
@@ -186,7 +187,7 @@ const ServicePortfolio: React.FC<ServicePortfolioProps> = ({ service }) => {
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Portfolio Highlights
+              Portfolio <span className="gradient-text">Highlights</span>
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Our web development projects have made a real impact across Rwanda's digital landscape

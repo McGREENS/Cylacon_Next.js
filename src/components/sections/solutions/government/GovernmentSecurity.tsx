@@ -22,7 +22,7 @@ const GovernmentSecurity: React.FC = () => {
     {
       framework: 'National Cybersecurity Framework',
       icon: <Shield className="w-8 h-8" />,
-      color: 'from-red-500 to-red-600',
+      color: 'from-primary-500 to-primary-600',
       description: 'Comprehensive cybersecurity framework aligned with national security policies.',
       requirements: [
         'National security standards',
@@ -40,7 +40,7 @@ const GovernmentSecurity: React.FC = () => {
     {
       framework: 'Government Data Protection',
       icon: <Lock className="w-8 h-8" />,
-      color: 'from-blue-500 to-blue-600',
+      color: 'from-secondary-500 to-secondary-600',
       description: 'Robust data protection measures for sensitive government information.',
       requirements: [
         'Data classification systems',
@@ -58,7 +58,7 @@ const GovernmentSecurity: React.FC = () => {
     {
       framework: 'Public Sector Security Standards',
       icon: <Building className="w-8 h-8" />,
-      color: 'from-green-500 to-green-600',
+      color: 'from-accent-500 to-accent-600',
       description: 'Security standards specifically designed for public sector organizations.',
       requirements: [
         'Multi-level security clearance',
@@ -76,7 +76,7 @@ const GovernmentSecurity: React.FC = () => {
     {
       framework: 'International Security Compliance',
       icon: <Globe className="w-8 h-8" />,
-      color: 'from-purple-500 to-purple-600',
+      color: 'from-primary-600 to-secondary-600',
       description: 'Compliance with international security standards and best practices.',
       requirements: [
         'ISO 27001 compliance',
@@ -182,11 +182,11 @@ const GovernmentSecurity: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Government Cybersecurity & Compliance
+            <span className="gradient-text">Government Cybersecurity</span> & Compliance
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Protect government systems and sensitive data with comprehensive cybersecurity solutions 
@@ -199,13 +199,13 @@ const GovernmentSecurity: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.8, delay: 0.2, type: "spring", stiffness: 100 }}
           className="bg-gradient-to-br from-red-50 to-orange-50 rounded-3xl p-8 md:p-12 mb-16 border border-red-100"
         >
           <div className="text-center mb-8">
             <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Government Cybersecurity Threat Landscape
+              <span className="gradient-text">Government Cybersecurity</span> Threat Landscape
             </h3>
             <p className="text-gray-700 max-w-2xl mx-auto">
               Government agencies face increasingly sophisticated cyber threats. 
@@ -233,8 +233,8 @@ const GovernmentSecurity: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="bg-gray-50 rounded-3xl p-8 hover:shadow-lg transition-shadow duration-300"
+              transition={{ duration: 0.8, delay: index * 0.1, type: "spring", stiffness: 100 }}
+              className="bg-gray-50 rounded-3xl p-8 hover:shadow-lg transition-all duration-300 hover:scale-105 hover:-translate-y-2 border border-transparent hover:border-primary-200"
             >
               <div className="flex items-center mb-6">
                 <div className={`w-16 h-16 bg-gradient-to-br ${framework.color} rounded-2xl flex items-center justify-center mr-4`}>
@@ -255,7 +255,7 @@ const GovernmentSecurity: React.FC = () => {
                 <div className="space-y-2">
                   {framework.requirements.map((requirement, reqIndex) => (
                     <div key={reqIndex} className="flex items-center space-x-2">
-                      <CheckCircle className="w-4 h-4 text-blue-500 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-primary-500 flex-shrink-0" />
                       <span className="text-sm text-gray-600">{requirement}</span>
                     </div>
                   ))}
@@ -268,7 +268,7 @@ const GovernmentSecurity: React.FC = () => {
                 <div className="space-y-2">
                   {framework.benefits.map((benefit, benefitIndex) => (
                     <div key={benefitIndex} className="flex items-center space-x-2">
-                      <Zap className="w-4 h-4 text-green-500 flex-shrink-0" />
+                      <Zap className="w-4 h-4 text-secondary-500 flex-shrink-0" />
                       <span className="text-sm text-gray-600">{benefit}</span>
                     </div>
                   ))}
@@ -283,12 +283,12 @@ const GovernmentSecurity: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8, delay: 0.4, type: "spring", stiffness: 100 }}
           className="bg-gray-50 rounded-3xl p-8 md:p-12 mb-20"
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Government Security Services
+              <span className="gradient-text">Government Security</span> Services
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Comprehensive security services designed specifically for government agencies 
@@ -304,10 +304,10 @@ const GovernmentSecurity: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 text-center shadow-md hover:shadow-lg transition-shadow duration-300"
+                className="bg-white rounded-2xl p-6 text-center shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 hover:-translate-y-2 border border-transparent hover:border-primary-200"
               >
-                <div className="w-14 h-14 bg-red-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <div className="text-red-600">
+                <div className="w-14 h-14 bg-primary-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <div className="text-primary-600">
                     {service.icon}
                   </div>
                 </div>
@@ -316,7 +316,7 @@ const GovernmentSecurity: React.FC = () => {
                 
                 <div className="space-y-1">
                   {service.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="text-xs text-red-600 font-medium">
+                    <div key={featureIndex} className="text-xs text-primary-600 font-medium">
                       • {feature}
                     </div>
                   ))}
@@ -331,12 +331,12 @@ const GovernmentSecurity: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.8, delay: 0.6, type: "spring", stiffness: 100 }}
           className="bg-white rounded-3xl p-8 md:p-12 shadow-lg mb-20"
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Government Security Implementation Process
+              <span className="gradient-text">Government Security</span> Implementation Process
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Our systematic approach ensures comprehensive security implementation 
@@ -354,15 +354,15 @@ const GovernmentSecurity: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-blue-600">{step.step}</span>
+                <div className="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-secondary-600">{step.step}</span>
                 </div>
                 <h4 className="text-lg font-bold text-gray-900 mb-3">{step.title}</h4>
                 <p className="text-gray-600 text-sm mb-4">{step.description}</p>
                 
                 <div className="space-y-1">
                   {step.deliverables.map((deliverable, deliverableIndex) => (
-                    <div key={deliverableIndex} className="text-xs text-blue-600 font-medium">
+                    <div key={deliverableIndex} className="text-xs text-secondary-600 font-medium">
                       • {deliverable}
                     </div>
                   ))}
@@ -377,12 +377,12 @@ const GovernmentSecurity: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="bg-gradient-to-br from-red-600 to-blue-600 rounded-3xl p-8 md:p-12 text-white text-center"
+          transition={{ duration: 0.8, delay: 0.8, type: "spring", stiffness: 100 }}
+          className="bg-gradient-to-br from-primary-600 to-secondary-600 rounded-3xl p-8 md:p-12 text-white text-center"
         >
-          <Award className="w-16 h-16 mx-auto mb-6 text-red-200" />
-          <h3 className="text-3xl font-bold mb-4">Government Security Guarantee</h3>
-          <p className="text-red-100 text-lg mb-8 max-w-2xl mx-auto">
+          <Award className="w-16 h-16 mx-auto mb-6 text-primary-200" />
+          <h3 className="text-3xl font-bold mb-4"><span className="text-primary-200">Government Security</span> Guarantee</h3>
+          <p className="text-primary-100 text-lg mb-8 max-w-2xl mx-auto">
             We guarantee that our government security solutions meet all national security requirements 
             and international standards. Our ISO 27001 certified team ensures maximum protection for your critical systems.
           </p>
@@ -390,31 +390,31 @@ const GovernmentSecurity: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div className="text-center">
               <div className="text-3xl font-bold mb-2">100%</div>
-              <div className="text-red-200">Security Compliance</div>
-              <div className="text-sm text-red-100">All implementations meet standards</div>
+              <div className="text-primary-200">Security Compliance</div>
+              <div className="text-sm text-primary-100">All implementations meet standards</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold mb-2">24/7</div>
-              <div className="text-red-200">Security Monitoring</div>
-              <div className="text-sm text-red-100">Continuous threat detection</div>
+              <div className="text-primary-200">Security Monitoring</div>
+              <div className="text-sm text-primary-100">Continuous threat detection</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold mb-2">Zero</div>
-              <div className="text-red-200">Security Incidents</div>
-              <div className="text-sm text-red-100">Perfect government security record</div>
+              <div className="text-primary-200">Security Incidents</div>
+              <div className="text-sm text-primary-100">Perfect government security record</div>
             </div>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="/consultation"
-              className="inline-flex items-center justify-center px-8 py-3 bg-white text-red-600 font-semibold rounded-lg hover:bg-red-50 transition-colors duration-200"
+              className="inline-flex items-center justify-center px-8 py-3 bg-white text-primary-600 font-semibold rounded-lg hover:bg-primary-50 transition-colors duration-200"
             >
               Get Security Assessment
             </a>
             <a 
               href="tel:+250780115764"
-              className="inline-flex items-center justify-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-red-600 transition-colors duration-200"
+              className="inline-flex items-center justify-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-primary-600 transition-colors duration-200"
             >
               Call +250 780 115 764
             </a>

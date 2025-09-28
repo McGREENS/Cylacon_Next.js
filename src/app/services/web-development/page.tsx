@@ -8,6 +8,7 @@ import ServiceTechnologies from '@/components/sections/services/ServiceTechnolog
 import ServicePortfolio from '@/components/sections/services/ServicePortfolio';
 import ServicePricing from '@/components/sections/services/ServicePricing';
 import CallToAction from '@/components/sections/CallToAction';
+import SectionTransition from '@/components/ui/SectionTransition';
 import { generateServiceMetadata, generateServiceStructuredData } from '@/components/seo/ServicePageSEO';
 
 const webDevelopmentService = {
@@ -64,35 +65,49 @@ export default function WebDevelopmentPage() {
           service="Web Development"
         />
         
+        <SectionTransition variant="wave" color="gray" />
+        
         {/* Service Overview */}
         <ServiceOverview 
           service={webDevelopmentService}
         />
+        
+        <SectionTransition variant="curve" color="white" />
         
         {/* Features & Capabilities */}
         <ServiceFeatures 
           service={webDevelopmentService}
         />
         
+        <SectionTransition variant="diagonal" color="gray" />
+        
         {/* Development Process */}
         <ServiceProcess 
           service="web-development"
         />
+        
+        <SectionTransition variant="wave" color="white" />
         
         {/* Technologies We Use */}
         <ServiceTechnologies 
           service="web-development"
         />
         
+        <SectionTransition variant="curve" color="gray" />
+        
         {/* Portfolio Examples */}
         <ServicePortfolio 
           service="web-development"
         />
         
+        <SectionTransition variant="wave" color="white" />
+        
         {/* Pricing Plans */}
         <ServicePricing 
           service="web-development"
         />
+        
+        <SectionTransition variant="diagonal" color="primary" />
         
         {/* Call to Action */}
         <CallToAction />

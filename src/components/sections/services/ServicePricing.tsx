@@ -14,8 +14,8 @@ const ServicePricing: React.FC<ServicePricingProps> = ({ service }) => {
     {
       name: 'Starter Website',
       description: 'Perfect for small businesses and startups',
-      price: '$800',
-      rwfPrice: '800,000 RWF',
+      price: 'Starting from',
+      rwfPrice: 'Contact for Quote',
       duration: '2-3 weeks',
       popular: false,
       features: [
@@ -33,8 +33,8 @@ const ServicePricing: React.FC<ServicePricingProps> = ({ service }) => {
     {
       name: 'Business Website',
       description: 'Comprehensive solution for growing businesses',
-      price: '$2,500',
-      rwfPrice: '2,500,000 RWF',
+      price: 'Most Popular',
+      rwfPrice: 'Contact for Quote',
       duration: '4-6 weeks',
       popular: true,
       features: [
@@ -54,8 +54,8 @@ const ServicePricing: React.FC<ServicePricingProps> = ({ service }) => {
     {
       name: 'E-commerce Platform',
       description: 'Full-featured online store solution',
-      price: '$5,000',
-      rwfPrice: '5,000,000 RWF',
+      price: 'Enterprise',
+      rwfPrice: 'Contact for Quote',
       duration: '6-10 weeks',
       popular: false,
       features: [
@@ -77,12 +77,12 @@ const ServicePricing: React.FC<ServicePricingProps> = ({ service }) => {
   ];
 
   const additionalServices = [
-    { name: 'Custom Web Application', price: 'From $3,000', description: 'Tailored solutions for specific business needs' },
-    { name: 'Website Redesign', price: 'From $1,500', description: 'Modernize your existing website' },
-    { name: 'Maintenance & Support', price: '$200/month', description: 'Ongoing updates and technical support' },
-    { name: 'SEO Optimization', price: '$500', description: 'Improve search engine rankings' },
-    { name: 'Performance Audit', price: '$300', description: 'Comprehensive website analysis' },
-    { name: 'Security Audit', price: '$400', description: 'Security assessment and improvements' }
+    { name: 'Custom Web Application', price: 'Quote on Request', description: 'Tailored solutions for specific business needs' },
+    { name: 'Website Redesign', price: 'Quote on Request', description: 'Modernize your existing website' },
+    { name: 'Maintenance & Support', price: 'Monthly Plans', description: 'Ongoing updates and technical support' },
+    { name: 'SEO Optimization', price: 'Quote on Request', description: 'Improve search engine rankings' },
+    { name: 'Performance Audit', price: 'Quote on Request', description: 'Comprehensive website analysis' },
+    { name: 'Security Audit', price: 'Quote on Request', description: 'Security assessment and improvements' }
   ];
 
   return (
@@ -97,7 +97,7 @@ const ServicePricing: React.FC<ServicePricingProps> = ({ service }) => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Web Development Pricing
+            Web Development <span className="gradient-text">Pricing</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Transparent pricing for professional web development services in Rwanda. 
@@ -110,11 +110,12 @@ const ServicePricing: React.FC<ServicePricingProps> = ({ service }) => {
           {pricingPlans.map((plan, index) => (
             <motion.div
               key={plan.name}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30, scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              className={`relative bg-white rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 ${
+              transition={{ duration: 0.8, delay: index * 0.1, type: "spring", stiffness: 100 }}
+              whileHover={{ scale: plan.popular ? 1.08 : 1.05, y: -8 }}
+              className={`relative bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-500 border border-transparent hover:border-primary-200 ${
                 plan.popular ? 'ring-2 ring-primary-500 transform scale-105' : ''
               }`}
             >
@@ -183,7 +184,7 @@ const ServicePricing: React.FC<ServicePricingProps> = ({ service }) => {
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Additional Services
+              Additional <span className="gradient-text">Services</span>
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Enhance your website with our additional services and ongoing support options

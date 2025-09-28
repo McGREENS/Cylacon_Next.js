@@ -22,7 +22,7 @@ const HospitalityTechnology: React.FC = () => {
     {
       category: 'Smart Hotel Technology',
       icon: <Hotel className="w-8 h-8" />,
-      color: 'from-blue-500 to-blue-600',
+      color: 'from-primary-500 to-primary-600',
       backgroundImage: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400',
       capabilities: [
         'IoT-enabled room controls',
@@ -143,7 +143,7 @@ const HospitalityTechnology: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Advanced Hospitality Technology Solutions
+            Advanced <span className="gradient-text">Hospitality Technology</span> Solutions
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Leverage cutting-edge technology to create exceptional guest experiences, 
@@ -205,7 +205,7 @@ const HospitalityTechnology: React.FC = () => {
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Hospitality Technology Implementation Methodology
+              <span className="gradient-text">Hospitality Technology</span> Implementation Methodology
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Our proven approach ensures successful hospitality technology implementations 
@@ -223,8 +223,8 @@ const HospitalityTechnology: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <div className="text-green-600">
+                <div className="w-16 h-16 bg-secondary-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <div className="text-secondary-600">
                     {approach.icon}
                   </div>
                 </div>
@@ -233,7 +233,7 @@ const HospitalityTechnology: React.FC = () => {
                 
                 <div className="space-y-1">
                   {approach.steps.map((step, stepIndex) => (
-                    <div key={stepIndex} className="text-xs text-green-600 font-medium">
+                    <div key={stepIndex} className="text-xs text-secondary-600 font-medium">
                       • {step}
                     </div>
                   ))}
@@ -253,7 +253,7 @@ const HospitalityTechnology: React.FC = () => {
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Latest Hospitality Technology Trends
+              Latest <span className="gradient-text">Hospitality Technology</span> Trends
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Stay ahead with the latest hospitality technology trends that are transforming 
@@ -271,8 +271,8 @@ const HospitalityTechnology: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
               >
-                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
-                  <div className="text-blue-600">
+                <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
+                  <div className="text-primary-600">
                     {trend.icon}
                   </div>
                 </div>
@@ -281,7 +281,7 @@ const HospitalityTechnology: React.FC = () => {
                 
                 <div className="space-y-1">
                   {trend.impact.map((impact, impactIndex) => (
-                    <div key={impactIndex} className="text-xs text-blue-600 font-medium">
+                    <div key={impactIndex} className="text-xs text-primary-600 font-medium">
                       • {impact}
                     </div>
                   ))}

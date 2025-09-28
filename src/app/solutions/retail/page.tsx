@@ -6,6 +6,7 @@ import RetailSolutions from '@/components/sections/solutions/retail/RetailSoluti
 import RetailTechnology from '@/components/sections/solutions/retail/RetailTechnology';
 import RetailSecurity from '@/components/sections/solutions/retail/RetailSecurity';
 import CallToAction from '@/components/sections/CallToAction';
+import SectionTransition from '@/components/ui/SectionTransition';
 
 const retailSolution = {
   name: 'Retail IT Solutions',
@@ -125,22 +126,32 @@ export default function RetailPage() {
           title="Digital Retail Transformation for Rwanda"
           subtitle="Empower your retail business with innovative IT solutions that enhance customer experiences, streamline operations, and drive growth in Rwanda's dynamic retail market."
           backgroundImage="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080"
-          service="Retail IT Solutions"
+          service="retail"
         />
+        
+        <SectionTransition variant="wave" />
         
         {/* Retail Overview */}
         <RetailOverview 
           solution={retailSolution}
         />
         
+        <SectionTransition variant="curve" />
+        
         {/* Retail Solutions */}
         <RetailSolutions />
+        
+        <SectionTransition variant="diagonal" />
         
         {/* Retail Technology */}
         <RetailTechnology />
         
+        <SectionTransition variant="wave" />
+        
         {/* Retail Security */}
         <RetailSecurity />
+        
+        <SectionTransition variant="curve" />
         
         {/* Call to Action */}
         <CallToAction />

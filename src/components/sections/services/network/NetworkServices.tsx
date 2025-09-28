@@ -36,7 +36,7 @@ const NetworkServices: React.FC = () => {
         'Centralized management',
         'Cost-effective operations'
       ],
-      color: 'from-blue-500 to-blue-600'
+      color: 'from-primary-500 to-primary-600'
     },
     {
       icon: <Wifi className="w-8 h-8" />,
@@ -55,7 +55,7 @@ const NetworkServices: React.FC = () => {
         'Secure guest access',
         'Mobile device support'
       ],
-      color: 'from-green-500 to-green-600'
+      color: 'from-secondary-500 to-secondary-600'
     },
     {
       icon: <Shield className="w-8 h-8" />,
@@ -74,7 +74,7 @@ const NetworkServices: React.FC = () => {
         'Compliance adherence',
         'Real-time monitoring'
       ],
-      color: 'from-red-500 to-red-600'
+      color: 'from-primary-600 to-secondary-600'
     },
     {
       icon: <Server className="w-8 h-8" />,
@@ -93,7 +93,7 @@ const NetworkServices: React.FC = () => {
         'Scalable architecture',
         'Reduced latency'
       ],
-      color: 'from-purple-500 to-purple-600'
+      color: 'from-accent-500 to-accent-600'
     }
   ];
 
@@ -132,11 +132,11 @@ const NetworkServices: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Comprehensive Network Infrastructure Services
+            Comprehensive <span className="gradient-text">Network Infrastructure</span> Services
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             From design to deployment and ongoing management, we provide end-to-end network 
@@ -152,8 +152,8 @@ const NetworkServices: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+              transition={{ duration: 0.8, delay: index * 0.1, type: "spring", stiffness: 100 }}
+              className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:-translate-y-2 border border-transparent hover:border-primary-200"
             >
               {/* Background Image Header */}
               <div className={`h-48 bg-gradient-to-br ${solution.color} relative overflow-hidden`}>
@@ -212,12 +212,12 @@ const NetworkServices: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8, delay: 0.4, type: "spring", stiffness: 100 }}
           className="bg-gray-50 rounded-3xl p-8 md:p-12 mb-20"
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Complete Network Infrastructure Services
+              Complete <span className="gradient-text">Network Infrastructure</span> Services
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               We provide comprehensive network services covering every aspect of your 
@@ -233,7 +233,7 @@ const NetworkServices: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 text-center shadow-md hover:shadow-lg transition-shadow duration-300"
+                className="bg-white rounded-2xl p-6 text-center shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 hover:-translate-y-2 border border-transparent hover:border-primary-200"
               >
                 <div className="w-14 h-14 bg-primary-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <div className="text-primary-600">
@@ -260,11 +260,11 @@ const NetworkServices: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.8, delay: 0.6, type: "spring", stiffness: 100 }}
           className="bg-gradient-to-br from-primary-600 to-secondary-600 rounded-3xl p-8 md:p-12 text-white text-center"
         >
           <Network className="w-16 h-16 mx-auto mb-6 text-primary-200" />
-          <h3 className="text-3xl font-bold mb-4">Supporting Rwanda's Digital Infrastructure</h3>
+          <h3 className="text-3xl font-bold mb-4">Supporting Rwanda's <span className="text-primary-200">Digital Infrastructure</span></h3>
           <p className="text-primary-100 text-lg mb-8 max-w-2xl mx-auto">
             We're committed to building robust network infrastructure that supports Rwanda's 
             vision of becoming a digital hub in East Africa.
