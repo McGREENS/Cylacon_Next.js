@@ -21,10 +21,11 @@ const IndustrySolutions: React.FC = () => {
     {
       name: 'Healthcare',
       icon: Heart,
-      color: 'from-red-500 to-pink-500',
-      bgColor: 'bg-red-50',
-      iconColor: 'text-red-500',
-      description: 'EHR systems, telemedicine, HIPAA compliance',
+      color: 'from-primary-500 to-primary-600',
+      bgColor: 'bg-primary-50',
+      iconColor: 'text-primary-500',
+      description: 'Digital health solutions transforming patient care and medical operations across Rwanda',
+      image: '/healthcare-tech.jpg',
       features: [
         'Electronic Health Records (EHR)',
         'Telemedicine Platforms',
@@ -32,20 +33,16 @@ const IndustrySolutions: React.FC = () => {
         'Patient Management Systems',
         'Medical Device Integration',
         'Health Data Analytics'
-      ],
-      caseStudy: {
-        title: 'MedGet Platform',
-        description: 'Developed a comprehensive healthcare management system for a leading medical facility in Kigali.',
-        results: ['40% increase in patient satisfaction', '60% reduction in administrative tasks', '100% HIPAA compliance']
-      }
+      ]
     },
     {
       name: 'Government',
       icon: Building,
-      color: 'from-blue-500 to-indigo-500',
-      bgColor: 'bg-blue-50',
-      iconColor: 'text-blue-500',
-      description: 'E-government portals, citizen services',
+      color: 'from-secondary-500 to-secondary-600',
+      bgColor: 'bg-secondary-50',
+      iconColor: 'text-secondary-500',
+      description: 'Digital government solutions enhancing citizen services and public administration',
+      image: '/government-tech.jpg',
       features: [
         'E-Government Portals',
         'Citizen Service Platforms',
@@ -53,20 +50,16 @@ const IndustrySolutions: React.FC = () => {
         'Public Service Automation',
         'Data Security & Compliance',
         'Multi-language Support'
-      ],
-      caseStudy: {
-        title: 'Rwanda Digital Services',
-        description: 'Implemented digital transformation solutions for government agencies across Rwanda.',
-        results: ['50% faster service delivery', '80% reduction in paperwork', '95% citizen satisfaction']
-      }
+      ]
     },
     {
       name: 'Education',
       icon: GraduationCap,
-      color: 'from-green-500 to-emerald-500',
-      bgColor: 'bg-green-50',
-      iconColor: 'text-green-500',
-      description: 'LMS, virtual classroom platforms',
+      color: 'from-primary-400 to-primary-500',
+      bgColor: 'bg-primary-50',
+      iconColor: 'text-primary-400',
+      description: 'Modern educational technology empowering learning institutions across East Africa',
+      image: '/education-tech.jpg',
       features: [
         'Learning Management Systems (LMS)',
         'Virtual Classroom Platforms',
@@ -74,20 +67,16 @@ const IndustrySolutions: React.FC = () => {
         'Online Assessment Tools',
         'Educational Analytics',
         'Mobile Learning Apps'
-      ],
-      caseStudy: {
-        title: 'EduTech Rwanda',
-        description: 'Created a comprehensive digital learning platform for universities and schools.',
-        results: ['70% improvement in student engagement', '90% reduction in administrative overhead', '85% increase in course completion rates']
-      }
+      ]
     },
     {
       name: 'Retail',
       icon: ShoppingCart,
-      color: 'from-orange-500 to-yellow-500',
-      bgColor: 'bg-orange-50',
-      iconColor: 'text-orange-500',
-      description: 'E-commerce, inventory management, POS systems',
+      color: 'from-accent-500 to-accent-600',
+      bgColor: 'bg-accent-50',
+      iconColor: 'text-accent-500',
+      description: 'Comprehensive retail technology solutions driving commerce growth and customer satisfaction',
+      image: '/retail-tech.jpg',
       features: [
         'E-commerce Platforms',
         'Inventory Management Systems',
@@ -95,20 +84,16 @@ const IndustrySolutions: React.FC = () => {
         'Customer Relationship Management',
         'Supply Chain Optimization',
         'Mobile Commerce Apps'
-      ],
-      caseStudy: {
-        title: 'RetailTech Solutions',
-        description: 'Developed integrated retail management systems for local and international retailers.',
-        results: ['45% increase in online sales', '30% reduction in inventory costs', '65% improvement in customer retention']
-      }
+      ]
     },
     {
       name: 'Manufacturing',
       icon: Factory,
-      color: 'from-gray-500 to-slate-500',
-      bgColor: 'bg-gray-50',
-      iconColor: 'text-gray-500',
-      description: 'IoT integration, production monitoring, quality control',
+      color: 'from-secondary-500 to-secondary-600',
+      bgColor: 'bg-secondary-50',
+      iconColor: 'text-secondary-500',
+      description: 'Smart manufacturing solutions with IoT integration and advanced automation systems',
+      image: '/manufacturing-tech.jpg',
       features: [
         'IoT Integration',
         'Production Monitoring Systems',
@@ -116,20 +101,16 @@ const IndustrySolutions: React.FC = () => {
         'Supply Chain Management',
         'Predictive Maintenance',
         'Real-time Analytics'
-      ],
-      caseStudy: {
-        title: 'Smart Manufacturing',
-        description: 'Implemented IoT and AI solutions for a leading manufacturing company in Rwanda.',
-        results: ['35% increase in production efficiency', '50% reduction in downtime', '25% improvement in quality control']
-      }
+      ]
     },
     {
       name: 'Hospitality',
       icon: Hotel,
-      color: 'from-purple-500 to-violet-500',
-      bgColor: 'bg-purple-50',
-      iconColor: 'text-purple-500',
-      description: 'Hotel management, booking systems, guest services',
+      color: 'from-primary-600 to-primary-700',
+      bgColor: 'bg-primary-50',
+      iconColor: 'text-primary-600',
+      description: 'Complete hospitality technology solutions enhancing guest experiences and operations',
+      image: '/hospitality-tech.jpg',
       features: [
         'Hotel Management Systems',
         'Online Booking Platforms',
@@ -137,12 +118,7 @@ const IndustrySolutions: React.FC = () => {
         'Revenue Management Tools',
         'Staff Management Systems',
         'Customer Experience Analytics'
-      ],
-      caseStudy: {
-        title: 'HotelTech Rwanda',
-        description: 'Created comprehensive hospitality management solutions for hotels and resorts.',
-        results: ['55% increase in bookings', '40% improvement in guest satisfaction', '30% reduction in operational costs']
-      }
+      ]
     },
   ];
 
@@ -243,41 +219,78 @@ const IndustrySolutions: React.FC = () => {
               </div>
             </div>
 
-            {/* Right Content - Case Study */}
-            <div className="space-y-6">
-              <div className="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-2xl p-8">
-                <h4 className="text-xl font-bold text-gray-900 mb-4">
-                  Case Study: {industries[activeTab].caseStudy.title}
-                </h4>
-                <p className="text-gray-600 mb-6">
-                  {industries[activeTab].caseStudy.description}
-                </p>
-                
-                <div className="space-y-3">
-                  <h5 className="font-semibold text-gray-900">Key Results:</h5>
-                  {industries[activeTab].caseStudy.results.map((result, index) => (
-                    <div key={index} className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-primary-500 rounded-full" />
-                      <span className="text-gray-700">{result}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Placeholder for Industry Image */}
-              <div className="relative">
-                <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl flex items-center justify-center">
-                  <div className="text-center space-y-2">
-                    <div className={`w-16 h-16 ${industries[activeTab].bgColor} rounded-xl flex items-center justify-center mx-auto`}>
+            {/* Right Content - Industry Image */}
+            <div className="relative">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+                className="relative group"
+              >
+                {/* Main Industry Image */}
+                <div className="relative overflow-hidden rounded-3xl shadow-2xl">
+                  <div 
+                    className="aspect-[4/3] bg-cover bg-center bg-no-repeat"
+                    style={{
+                      backgroundImage: `url(${industries[activeTab].image})`,
+                    }}
+                  />
+                  
+                  {/* Gradient Overlay */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${industries[activeTab].color} opacity-20 group-hover:opacity-30 transition-opacity duration-500`} />
+                  
+                  {/* Floating Icon */}
+                  <motion.div
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ delay: 0.3 }}
+                    className="absolute top-6 right-6"
+                  >
+                    <div className={`w-16 h-16 ${industries[activeTab].bgColor} backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-lg border border-white/20`}>
                       {React.createElement(industries[activeTab].icon, { 
                         className: `w-8 h-8 ${industries[activeTab].iconColor}` 
                       })}
                     </div>
-                    <p className="text-gray-600 font-medium">{industries[activeTab].name} Industry Image</p>
-                    <p className="text-sm text-gray-500">Replace with relevant industry visualization</p>
-                  </div>
+                  </motion.div>
+                  
+                  {/* Bottom Info Card */}
+                  <motion.div
+                    initial={{ y: 50, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ delay: 0.5 }}
+                    className="absolute bottom-6 left-6 right-6"
+                  >
+                    <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white/20">
+                      <h4 className="text-xl font-bold text-gray-900 mb-2">
+                        {industries[activeTab].name} Solutions
+                      </h4>
+                      <p className="text-gray-600 text-sm leading-relaxed">
+                        Cutting-edge technology solutions designed specifically for the {industries[activeTab].name.toLowerCase()} industry
+                      </p>
+                      
+                      {/* Stats */}
+                      <div className="flex items-center justify-between mt-4 pt-4 border-t border-gray-200">
+                        <div className="text-center">
+                          <div className="text-2xl font-bold text-primary-600">150+</div>
+                          <div className="text-xs text-gray-500">Projects</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="text-2xl font-bold text-primary-600">99%</div>
+                          <div className="text-xs text-gray-500">Success Rate</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="text-2xl font-bold text-primary-600">24/7</div>
+                          <div className="text-xs text-gray-500">Support</div>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
                 </div>
-              </div>
+                
+                {/* Decorative Elements */}
+                <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary-500/10 rounded-full blur-xl" />
+                <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-secondary-500/10 rounded-full blur-xl" />
+              </motion.div>
             </div>
           </motion.div>
         </AnimatePresence>

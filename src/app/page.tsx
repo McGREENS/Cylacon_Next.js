@@ -7,6 +7,7 @@ import IndustrySolutions from '@/components/sections/IndustrySolutions';
 import MetricsSection from '@/components/sections/MetricsSection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import FAQStructuredData, { itServicesFAQs } from '@/components/seo/FAQStructuredData';
+import SectionTransition, { SectionDivider } from '@/components/ui/SectionTransition';
 
 export const metadata: Metadata = {
   title: 'CyLaCon | 1st IT Solutions Provider in Rwanda | Web Development, Cybersecurity & Cloud Solutions Kigali',
@@ -66,24 +67,52 @@ export default function HomePage() {
         faqs={itServicesFAQs} 
         pageUrl="https://cylacon.com" 
       />
-      <main className="min-h-screen">
-        {/* Hero Section */}
+      <main className="min-h-screen overflow-hidden">
+        {/* Hero Section - No transition wrapper needed as it's the first section */}
         <HeroSection />
         
-        {/* Trust Bar */}
-        <TrustBar />
+        {/* Smooth Divider */}
+        <SectionDivider type="wave" color="text-white" height="h-20" />
         
-        {/* Services Section */}
-        <ServicesSection />
+        {/* Trust Bar with Slide Transition */}
+        <SectionTransition type="slide" direction="up" delay={0.2} duration={1}>
+          <TrustBar />
+        </SectionTransition>
         
-        {/* Industry Solutions */}
-        <IndustrySolutions />
+        {/* Curved Divider */}
+        <SectionDivider type="curve" color="text-gray-50" height="h-16" />
         
-        {/* Metrics Section */}
-        <MetricsSection />
+        {/* Services Section with Scale Transition */}
+        <SectionTransition type="scale" delay={0.3} duration={1.2}>
+          <ServicesSection />
+        </SectionTransition>
         
-        {/* Testimonials Section */}
-        <TestimonialsSection />
+        {/* Wave Divider */}
+        <SectionDivider type="wave" color="text-primary-50" height="h-20" flip={true} />
+        
+        {/* Industry Solutions with Reveal Transition */}
+        <SectionTransition type="reveal" direction="left" delay={0.1} duration={1.5}>
+          <IndustrySolutions />
+        </SectionTransition>
+        
+        {/* Diagonal Divider */}
+        <SectionDivider type="diagonal" color="text-slate-100" height="h-24" />
+        
+        {/* Metrics Section with Wave Transition */}
+        <SectionTransition type="wave" delay={0.4} duration={1.8}>
+          <MetricsSection />
+        </SectionTransition>
+        
+        {/* Zigzag Divider */}
+        <SectionDivider type="zigzag" color="text-primary-100" height="h-16" />
+        
+        {/* Testimonials Section with Spiral Transition */}
+        <SectionTransition type="spiral" delay={0.2} duration={2}>
+          <TestimonialsSection />
+        </SectionTransition>
+        
+        {/* Final Dots Divider */}
+        <SectionDivider type="dots" color="text-primary-500" height="h-12" />
       </main>
     </>
   );

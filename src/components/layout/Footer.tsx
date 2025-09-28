@@ -54,10 +54,10 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-slate-900 text-white">
       {/* Main Footer Content */}
-      <div className="container-custom section-padding">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+      <div className="container-custom py-16 px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <motion.div
@@ -72,37 +72,37 @@ const Footer: React.FC = () => {
                 </div>
                 <span className="text-xl font-bold">CyLaCon</span>
               </Link>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-slate-300 leading-relaxed text-sm sm:text-base">
                 Transforming businesses through innovative IT solutions. We deliver 
                 enterprise-grade technology services with focus on security, 
                 scalability, and measurable business impact.
               </p>
-              <div className="flex space-x-4">
+              <div className="flex flex-wrap gap-3 sm:gap-4">
                 <motion.a
                   whileHover={{ scale: 1.1 }}
                   href="https://linkedin.com/company/cylacon"
-                  className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-500 transition-colors duration-200"
+                  className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-primary-500 transition-colors duration-200"
                 >
                   <Linkedin className="w-5 h-5" />
                 </motion.a>
                 <motion.a
                   whileHover={{ scale: 1.1 }}
                   href="https://instagram.com/cylacon_rw"
-                  className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-500 transition-colors duration-200"
+                  className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-primary-500 transition-colors duration-200"
                 >
                   <Instagram className="w-5 h-5" />
                 </motion.a>
                 <motion.a
                   whileHover={{ scale: 1.1 }}
                   href="https://twitter.com/cylacon_rw"
-                  className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-500 transition-colors duration-200"
+                  className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-primary-500 transition-colors duration-200"
                 >
                   <Twitter className="w-5 h-5" />
                 </motion.a>
                 <motion.a
                   whileHover={{ scale: 1.1 }}
                   href="https://facebook.com/cylacon"
-                  className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-500 transition-colors duration-200"
+                  className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-primary-500 transition-colors duration-200"
                 >
                   <Facebook className="w-5 h-5" />
                 </motion.a>
@@ -118,13 +118,13 @@ const Footer: React.FC = () => {
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
             >
-              <h3 className="text-lg font-semibold mb-4">Services</h3>
+              <h3 className="text-lg font-semibold mb-4 text-white">Services</h3>
               <ul className="space-y-3">
                 {services.map((service) => (
                   <li key={service.name}>
                     <Link
                       href={service.href}
-                      className="text-gray-300 hover:text-primary-400 transition-colors duration-200"
+                      className="text-slate-300 hover:text-primary-400 transition-colors duration-200 text-sm sm:text-base"
                     >
                       {service.name}
                     </Link>
@@ -142,13 +142,13 @@ const Footer: React.FC = () => {
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
             >
-              <h3 className="text-lg font-semibold mb-4">Solutions</h3>
+              <h3 className="text-lg font-semibold mb-4 text-white">Solutions</h3>
               <ul className="space-y-3">
                 {solutions.map((solution) => (
                   <li key={solution.name}>
                     <Link
                       href={solution.href}
-                      className="text-gray-300 hover:text-primary-400 transition-colors duration-200"
+                      className="text-slate-300 hover:text-primary-400 transition-colors duration-200 text-sm sm:text-base"
                     >
                       {solution.name}
                     </Link>
@@ -166,12 +166,12 @@ const Footer: React.FC = () => {
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
             >
-              <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
+              <h3 className="text-lg font-semibold mb-4 text-white">Contact Info</h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
                   <MapPin className="w-5 h-5 text-primary-400 mt-1 flex-shrink-0" />
                   <div>
-                    <p className="text-gray-300">
+                    <p className="text-slate-300 text-sm sm:text-base">
                       KG 541 St, Kigali<br />
                       Rwanda, East Africa
                     </p>
@@ -181,7 +181,7 @@ const Footer: React.FC = () => {
                   <Phone className="w-5 h-5 text-primary-400 flex-shrink-0" />
                   <a
                     href="tel:+250780115764"
-                    className="text-gray-300 hover:text-primary-400 transition-colors duration-200"
+                    className="text-slate-300 hover:text-primary-400 transition-colors duration-200 text-sm sm:text-base"
                   >
                     +250 780 115 764
                   </a>
@@ -190,7 +190,7 @@ const Footer: React.FC = () => {
                   <Mail className="w-5 h-5 text-primary-400 flex-shrink-0" />
                   <a
                     href="mailto:info@cylacon.com"
-                    className="text-gray-300 hover:text-primary-400 transition-colors duration-200"
+                    className="text-slate-300 hover:text-primary-400 transition-colors duration-200 text-sm sm:text-base"
                   >
                     info@cylacon.com
                   </a>
@@ -206,20 +206,20 @@ const Footer: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
-          className="mt-12 pt-8 border-t border-gray-800"
+          className="mt-12 pt-8 border-t border-slate-800"
         >
           <div className="max-w-md mx-auto text-center">
-            <h3 className="text-xl font-semibold mb-2">Stay Updated</h3>
-            <p className="text-gray-300 mb-6">
+            <h3 className="text-xl font-semibold mb-2 text-white">Stay Updated</h3>
+            <p className="text-slate-300 mb-6 text-sm sm:text-base">
               Get the latest insights on technology trends and IT solutions.
             </p>
-            <div className="flex space-x-2">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-2">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent text-white placeholder-gray-400"
+                className="flex-1 px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent text-white placeholder-slate-400 text-sm sm:text-base"
               />
-              <button className="px-6 py-3 bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-lg transition-colors duration-200">
+              <button className="px-6 py-3 bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-lg transition-colors duration-200 whitespace-nowrap">
                 Subscribe
               </button>
             </div>
@@ -228,19 +228,19 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="bg-gray-950 py-6">
-        <div className="container-custom">
-          <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-            <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
-              <p className="text-gray-400 text-sm">
+      <div className="bg-slate-950 py-6">
+        <div className="container-custom px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
+            <div className="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-6 text-center sm:text-left">
+              <p className="text-slate-400 text-sm">
                 © 2024 CyLaCon. All rights reserved.
               </p>
-              <div className="flex space-x-6">
+              <div className="flex flex-wrap justify-center sm:justify-start gap-4 sm:gap-6">
                 {legal.map((item) => (
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="text-gray-400 hover:text-primary-400 text-sm transition-colors duration-200"
+                    className="text-slate-400 hover:text-primary-400 text-sm transition-colors duration-200"
                   >
                     {item.name}
                   </Link>
@@ -251,7 +251,7 @@ const Footer: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={scrollToTop}
-              className="flex items-center space-x-2 text-gray-400 hover:text-primary-400 transition-colors duration-200"
+              className="flex items-center space-x-2 text-slate-400 hover:text-primary-400 transition-colors duration-200 mt-4 lg:mt-0"
             >
               <span className="text-sm">Back to top</span>
               <ArrowUp className="w-4 h-4" />

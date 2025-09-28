@@ -4,6 +4,8 @@ import './globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { seoConfig, generateStructuredData } from '@/lib/seo-config';
+import SmoothScroll, { ScrollToTop } from '@/components/ui/SmoothScroll';
+import PageTransition from '@/components/ui/PageTransition';
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -209,9 +211,14 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.className} antialiased`}>
-        <Header />
-        {children}
-        <Footer />
+        <SmoothScroll>
+          <Header />
+          <PageTransition>
+            {children}
+          </PageTransition>
+          <Footer />
+          <ScrollToTop />
+        </SmoothScroll>
       </body>
     </html>
   );
