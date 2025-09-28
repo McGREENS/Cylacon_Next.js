@@ -22,7 +22,7 @@ const DigitalGovernment: React.FC = () => {
     {
       category: 'Digital Service Delivery',
       icon: <Monitor className="w-8 h-8" />,
-      color: 'from-blue-500 to-blue-600',
+      color: 'from-primary-500 to-primary-600',
       backgroundImage: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400',
       capabilities: [
         'Online government services',
@@ -36,7 +36,7 @@ const DigitalGovernment: React.FC = () => {
     {
       category: 'Smart Government Analytics',
       icon: <Brain className="w-8 h-8" />,
-      color: 'from-green-500 to-green-600',
+      color: 'from-secondary-500 to-secondary-600',
       backgroundImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400',
       capabilities: [
         'Government performance dashboards',
@@ -50,7 +50,7 @@ const DigitalGovernment: React.FC = () => {
     {
       category: 'Cloud Government Infrastructure',
       icon: <Cloud className="w-8 h-8" />,
-      color: 'from-purple-500 to-purple-600',
+      color: 'from-accent-500 to-accent-600',
       backgroundImage: 'https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400',
       capabilities: [
         'Government cloud platforms',
@@ -64,7 +64,7 @@ const DigitalGovernment: React.FC = () => {
     {
       category: 'Mobile Government (mGov)',
       icon: <Smartphone className="w-8 h-8" />,
-      color: 'from-orange-500 to-orange-600',
+      color: 'from-primary-600 to-secondary-600',
       backgroundImage: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400',
       capabilities: [
         'Mobile government apps',
@@ -139,11 +139,11 @@ const DigitalGovernment: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Digital Government Transformation
+            <span className="gradient-text">Digital Government</span> Transformation
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Leverage cutting-edge digital technologies to transform government operations, 
@@ -159,8 +159,8 @@ const DigitalGovernment: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+              transition={{ duration: 0.8, delay: index * 0.1, type: "spring", stiffness: 100 }}
+              className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:-translate-y-2 border border-transparent hover:border-primary-200"
             >
               {/* Background Image Header */}
               <div className={`h-48 bg-gradient-to-br ${initiative.color} relative overflow-hidden`}>
@@ -185,7 +185,7 @@ const DigitalGovernment: React.FC = () => {
                 <div className="space-y-3">
                   {initiative.capabilities.map((capability, capabilityIndex) => (
                     <div key={capabilityIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-secondary-500 flex-shrink-0" />
                       <span className="text-gray-700">{capability}</span>
                     </div>
                   ))}
@@ -200,12 +200,12 @@ const DigitalGovernment: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8, delay: 0.4, type: "spring", stiffness: 100 }}
           className="bg-white rounded-3xl p-8 md:p-12 shadow-lg mb-20"
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Digital Government Implementation Framework
+              <span className="gradient-text">Digital Government</span> Implementation Framework
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Our proven methodology ensures successful digital government implementations 
@@ -223,8 +223,8 @@ const DigitalGovernment: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <div className="text-blue-600">
+                <div className="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <div className="text-primary-600">
                     {framework.icon}
                   </div>
                 </div>
@@ -233,7 +233,7 @@ const DigitalGovernment: React.FC = () => {
                 
                 <div className="space-y-1">
                   {framework.steps.map((step, stepIndex) => (
-                    <div key={stepIndex} className="text-xs text-blue-600 font-medium">
+                    <div key={stepIndex} className="text-xs text-primary-600 font-medium">
                       • {step}
                     </div>
                   ))}
@@ -248,12 +248,12 @@ const DigitalGovernment: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.8, delay: 0.6, type: "spring", stiffness: 100 }}
           className="bg-gray-50 rounded-3xl p-8 md:p-12"
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Rwanda's Digital Government Success Stories
+              Rwanda's <span className="gradient-text">Digital Government</span> Success Stories
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Rwanda is a leader in digital government transformation in Africa. 
@@ -269,10 +269,10 @@ const DigitalGovernment: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
+                className="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 hover:-translate-y-2 border border-transparent hover:border-primary-200"
               >
-                <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
-                  <div className="text-green-600">
+                <div className="w-12 h-12 bg-secondary-100 rounded-xl flex items-center justify-center mb-4">
+                  <div className="text-secondary-600">
                     {initiative.icon}
                   </div>
                 </div>
@@ -281,7 +281,7 @@ const DigitalGovernment: React.FC = () => {
                 
                 <div className="space-y-1">
                   {initiative.achievements.map((achievement, achievementIndex) => (
-                    <div key={achievementIndex} className="text-xs text-green-600 font-medium">
+                    <div key={achievementIndex} className="text-xs text-secondary-600 font-medium">
                       • {achievement}
                     </div>
                   ))}

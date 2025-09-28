@@ -34,7 +34,7 @@ const HeroSection: React.FC = () => {
   };
 
   const floatingIcons = [
-    { Icon: Code, color: 'text-blue-400', size: 'w-8 h-8', delay: 0 },
+    { Icon: Code, color: 'text-primary-400', size: 'w-8 h-8', delay: 0 },
     { Icon: Database, color: 'text-green-400', size: 'w-6 h-6', delay: 1 },
     { Icon: Cloud, color: 'text-purple-400', size: 'w-7 h-7', delay: 2 },
     { Icon: Shield, color: 'text-red-400', size: 'w-6 h-6', delay: 3 },

@@ -10,8 +10,8 @@ const CloudPricing: React.FC = () => {
     {
       name: 'Cloud Starter',
       description: 'Perfect for small businesses starting their cloud journey',
-      price: '$300',
-      rwfPrice: '300,000 RWF',
+      price: 'Starter',
+      rwfPrice: 'Contact for Quote',
       duration: 'per month',
       popular: false,
       features: [
@@ -25,13 +25,13 @@ const CloudPricing: React.FC = () => {
         'Cloud migration assistance'
       ],
       ideal: 'Small businesses, startups, basic cloud needs',
-      setupFee: '$500 setup fee'
+      setupFee: 'Setup fee applies'
     },
     {
       name: 'Cloud Professional',
       description: 'Comprehensive cloud solution for growing businesses',
-      price: '$800',
-      rwfPrice: '800,000 RWF',
+      price: 'Most Popular',
+      rwfPrice: 'Contact for Quote',
       duration: 'per month',
       popular: true,
       features: [
@@ -47,13 +47,13 @@ const CloudPricing: React.FC = () => {
         'Performance optimization'
       ],
       ideal: 'Growing businesses, medium enterprises, high availability needs',
-      setupFee: '$1,500 setup fee'
+      setupFee: 'Setup fee applies'
     },
     {
       name: 'Cloud Enterprise',
       description: 'Full-scale cloud infrastructure for large organizations',
-      price: '$2,500',
-      rwfPrice: '2,500,000 RWF',
+      price: 'Enterprise',
+      rwfPrice: 'Contact for Quote',
       duration: 'per month',
       popular: false,
       features: [
@@ -71,44 +71,44 @@ const CloudPricing: React.FC = () => {
         'SLA guarantees'
       ],
       ideal: 'Large enterprises, government, mission-critical applications',
-      setupFee: '$5,000 setup fee'
+      setupFee: 'Setup fee applies'
     }
   ];
 
   const migrationServices = [
     { 
       name: 'Cloud Assessment', 
-      price: 'From $1,000', 
+      price: 'Quote on Request', 
       description: 'Comprehensive cloud readiness evaluation',
       duration: '1-2 weeks'
     },
     { 
       name: 'Cloud Migration', 
-      price: 'From $5,000', 
+      price: 'Quote on Request', 
       description: 'Complete migration of systems to cloud',
       duration: '4-8 weeks'
     },
     { 
       name: 'Cloud Architecture Design', 
-      price: 'From $3,000', 
+      price: 'Quote on Request', 
       description: 'Custom cloud infrastructure design',
       duration: '2-3 weeks'
     },
     { 
       name: 'Disaster Recovery Setup', 
-      price: 'From $2,000', 
+      price: 'Quote on Request', 
       description: 'Business continuity and backup solutions',
       duration: '1-2 weeks'
     },
     { 
       name: 'Cloud Security Audit', 
-      price: 'From $2,500', 
+      price: 'Quote on Request', 
       description: 'Comprehensive security assessment',
       duration: '2-3 weeks'
     },
     { 
       name: 'Performance Optimization', 
-      price: 'From $1,500', 
+      price: 'Quote on Request', 
       description: 'Cloud performance tuning and optimization',
       duration: '1-2 weeks'
     }
@@ -147,7 +147,7 @@ const CloudPricing: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Cloud Solutions Pricing
+            Cloud Solutions <span className="gradient-text">Pricing</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Transparent, flexible pricing for comprehensive cloud solutions. Choose the plan that 
@@ -160,11 +160,12 @@ const CloudPricing: React.FC = () => {
           {pricingPlans.map((plan, index) => (
             <motion.div
               key={plan.name}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30, scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              className={`relative bg-white rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 ${
+              transition={{ duration: 0.8, delay: index * 0.1, type: "spring", stiffness: 100 }}
+              whileHover={{ scale: plan.popular ? 1.08 : 1.05, y: -8 }}
+              className={`relative bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-500 border border-transparent hover:border-primary-200 ${
                 plan.popular ? 'ring-2 ring-primary-500 transform scale-105' : ''
               }`}
             >
@@ -234,7 +235,7 @@ const CloudPricing: React.FC = () => {
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Cloud Migration & Consulting Services
+              Cloud Migration & <span className="gradient-text">Consulting</span> Services
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               One-time services to help you plan, migrate, and optimize your cloud infrastructure
@@ -272,7 +273,7 @@ const CloudPricing: React.FC = () => {
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Cloud Platform Management
+              Cloud Platform <span className="gradient-text">Management</span>
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               We manage your cloud infrastructure across all major platforms with transparent pricing

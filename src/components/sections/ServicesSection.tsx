@@ -24,9 +24,9 @@ const ServicesSection: React.FC = () => {
       title: 'Web Development',
       description: 'Responsive design, e-commerce, PWAs',
       features: ['Responsive Design', 'E-commerce Solutions', 'Progressive Web Apps', 'Custom CMS'],
-      color: 'from-blue-500 to-blue-600',
-      bgColor: 'bg-blue-50',
-      iconColor: 'text-blue-500',
+      color: 'from-primary-500 to-primary-600',
+      bgColor: 'bg-primary-50',
+      iconColor: 'text-primary-500',
       href: '/services/web-development'
     },
     {

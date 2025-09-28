@@ -34,7 +34,7 @@ const RetailSolutions: React.FC = () => {
         'Integrated payment options',
         'Better customer experience'
       ],
-      color: 'from-blue-500 to-blue-600'
+      color: 'from-primary-500 to-primary-600'
     },
     {
       icon: <Globe className="w-8 h-8" />,
@@ -53,7 +53,7 @@ const RetailSolutions: React.FC = () => {
         'Reduced operational costs',
         'Better customer insights'
       ],
-      color: 'from-green-500 to-green-600'
+      color: 'from-secondary-500 to-secondary-600'
     },
     {
       icon: <Database className="w-8 h-8" />,
@@ -72,7 +72,7 @@ const RetailSolutions: React.FC = () => {
         'Cost savings',
         'Improved efficiency'
       ],
-      color: 'from-purple-500 to-purple-600'
+      color: 'from-accent-500 to-accent-600'
     },
     {
       icon: <Users className="w-8 h-8" />,
@@ -91,7 +91,7 @@ const RetailSolutions: React.FC = () => {
         'Higher customer lifetime value',
         'Better customer insights'
       ],
-      color: 'from-orange-500 to-orange-600'
+      color: 'from-primary-600 to-secondary-600'
     }
   ];
 
@@ -130,11 +130,11 @@ const RetailSolutions: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Comprehensive Retail IT Solutions
+            Comprehensive <span className="gradient-text">Retail IT Solutions</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             From small shops to large retail chains, we provide end-to-end digital solutions 
@@ -150,8 +150,8 @@ const RetailSolutions: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+              transition={{ duration: 0.8, delay: index * 0.1, type: "spring", stiffness: 100 }}
+              className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:-translate-y-2 border border-transparent hover:border-primary-200"
             >
               {/* Background Image Header */}
               <div className={`h-48 bg-gradient-to-br ${solution.color} relative overflow-hidden`}>
@@ -181,7 +181,7 @@ const RetailSolutions: React.FC = () => {
                   <div className="space-y-2">
                     {solution.solutions.map((sol, solIndex) => (
                       <div key={solIndex} className="flex items-center space-x-2">
-                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-secondary-500 flex-shrink-0" />
                         <span className="text-sm text-gray-600">{sol}</span>
                       </div>
                     ))}
@@ -194,7 +194,7 @@ const RetailSolutions: React.FC = () => {
                   <div className="space-y-2">
                     {solution.benefits.map((benefit, benefitIndex) => (
                       <div key={benefitIndex} className="flex items-center space-x-2">
-                        <Zap className="w-4 h-4 text-blue-500 flex-shrink-0" />
+                        <Zap className="w-4 h-4 text-primary-500 flex-shrink-0" />
                         <span className="text-sm text-gray-600">{benefit}</span>
                       </div>
                     ))}
@@ -210,12 +210,12 @@ const RetailSolutions: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8, delay: 0.4, type: "spring", stiffness: 100 }}
           className="bg-gray-50 rounded-3xl p-8 md:p-12 mb-20"
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Specialized Retail Solutions
+              Specialized <span className="gradient-text">Retail Solutions</span>
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Advanced retail technology solutions designed for specific business needs 
@@ -231,10 +231,10 @@ const RetailSolutions: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 text-center shadow-md hover:shadow-lg transition-shadow duration-300"
+                className="bg-white rounded-2xl p-6 text-center shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 hover:-translate-y-2 border border-transparent hover:border-primary-200"
               >
-                <div className="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <div className="text-blue-600">
+                <div className="w-14 h-14 bg-primary-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <div className="text-primary-600">
                     {solution.icon}
                   </div>
                 </div>
@@ -243,7 +243,7 @@ const RetailSolutions: React.FC = () => {
                 
                 <div className="space-y-1">
                   {solution.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="text-xs text-blue-600 font-medium">
+                    <div key={featureIndex} className="text-xs text-primary-600 font-medium">
                       • {feature}
                     </div>
                   ))}
@@ -258,12 +258,12 @@ const RetailSolutions: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="bg-gradient-to-br from-blue-600 to-green-600 rounded-3xl p-8 md:p-12 text-white text-center"
+          transition={{ duration: 0.8, delay: 0.6, type: "spring", stiffness: 100 }}
+          className="bg-gradient-to-br from-primary-600 to-secondary-600 rounded-3xl p-8 md:p-12 text-white text-center"
         >
-          <Store className="w-16 h-16 mx-auto mb-6 text-blue-200" />
-          <h3 className="text-3xl font-bold mb-4">Empowering Rwanda's Retail Sector</h3>
-          <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
+          <Store className="w-16 h-16 mx-auto mb-6 text-primary-200" />
+          <h3 className="text-3xl font-bold mb-4">Empowering Rwanda's <span className="text-primary-200">Retail Sector</span></h3>
+          <p className="text-primary-100 text-lg mb-8 max-w-2xl mx-auto">
             We're proud to support Rwanda's growing retail sector with innovative technology solutions. 
             From traditional markets to modern shopping centers, we help businesses thrive in the digital age.
           </p>
@@ -271,18 +271,18 @@ const RetailSolutions: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="text-3xl font-bold mb-2">200+</div>
-              <div className="text-blue-200">Retail Businesses</div>
-              <div className="text-sm text-blue-100">Successfully digitized</div>
+              <div className="text-primary-200">Retail Businesses</div>
+              <div className="text-sm text-primary-100">Successfully digitized</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold mb-2">1M+</div>
-              <div className="text-blue-200">Transactions Processed</div>
-              <div className="text-sm text-blue-100">Through our retail systems</div>
+              <div className="text-primary-200">Transactions Processed</div>
+              <div className="text-sm text-primary-100">Through our retail systems</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold mb-2">99.9%</div>
-              <div className="text-blue-200">System Uptime</div>
-              <div className="text-sm text-blue-100">Reliable retail operations</div>
+              <div className="text-primary-200">System Uptime</div>
+              <div className="text-sm text-primary-100">Reliable retail operations</div>
             </div>
           </div>
         </motion.div>

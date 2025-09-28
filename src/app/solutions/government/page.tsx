@@ -6,6 +6,7 @@ import GovernmentSolutions from '@/components/sections/solutions/government/Gove
 import DigitalGovernment from '@/components/sections/solutions/government/DigitalGovernment';
 import GovernmentSecurity from '@/components/sections/solutions/government/GovernmentSecurity';
 import CallToAction from '@/components/sections/CallToAction';
+import SectionTransition from '@/components/ui/SectionTransition';
 
 const governmentSolution = {
   name: 'Government IT Solutions',
@@ -125,22 +126,32 @@ export default function GovernmentPage() {
           title="Digital Government Transformation for Rwanda"
           subtitle="Empower public institutions with innovative IT solutions that enhance citizen services, improve governance, and drive Rwanda's digital transformation agenda."
           backgroundImage="/Rwanda.jpg"
-          service="Government IT Solutions"
+          service="government"
         />
+        
+        <SectionTransition variant="wave" />
         
         {/* Government Overview */}
         <GovernmentOverview 
           solution={governmentSolution}
         />
         
+        <SectionTransition variant="curve" />
+        
         {/* Government Solutions */}
         <GovernmentSolutions />
+        
+        <SectionTransition variant="diagonal" />
         
         {/* Digital Government */}
         <DigitalGovernment />
         
+        <SectionTransition variant="wave" />
+        
         {/* Government Security */}
         <GovernmentSecurity />
+        
+        <SectionTransition variant="curve" />
         
         {/* Call to Action */}
         <CallToAction />

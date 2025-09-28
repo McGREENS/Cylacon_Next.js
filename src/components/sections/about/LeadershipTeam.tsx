@@ -56,7 +56,7 @@ const LeadershipTeam: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Leadership Team
+            Leadership <span className="gradient-text">Team</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Meet the experienced professionals leading CyLaCon's mission to transform 
@@ -69,11 +69,12 @@ const LeadershipTeam: React.FC = () => {
           {teamMembers.map((member, index) => (
             <motion.div
               key={member.name}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30, scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="bg-white rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group"
+              transition={{ duration: 0.8, delay: index * 0.1, type: "spring", stiffness: 100 }}
+              whileHover={{ scale: 1.05, y: -10 }}
+              className="bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 group border border-transparent hover:border-primary-200"
             >
               {/* Profile Image */}
               <div className="relative mb-6">
@@ -137,7 +138,7 @@ const LeadershipTeam: React.FC = () => {
         >
           <div className="bg-white rounded-3xl p-8 md:p-12 shadow-lg">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Ready to Work with Our Team?
+              Ready to Work with Our <span className="gradient-text">Team</span>?
             </h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
               Our leadership team is committed to understanding your business needs and 

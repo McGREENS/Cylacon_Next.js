@@ -57,7 +57,7 @@ const CybersecuritySolutions: React.FC = () => {
         'Secure communication channels',
         'Incident response planning'
       ],
-      color: 'from-blue-500 to-indigo-500'
+      color: 'from-primary-500 to-secondary-500'
     },
     {
       icon: <GraduationCap className="w-8 h-8" />,

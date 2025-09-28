@@ -10,8 +10,8 @@ const CybersecurityPricing: React.FC = () => {
     {
       name: 'Essential Security',
       description: 'Basic cybersecurity protection for small businesses',
-      price: '$500',
-      rwfPrice: '500,000 RWF',
+      price: 'Essential',
+      rwfPrice: 'Contact for Quote',
       duration: 'per month',
       popular: false,
       features: [
@@ -25,13 +25,13 @@ const CybersecurityPricing: React.FC = () => {
         'Incident response (basic)'
       ],
       ideal: 'Small businesses, startups, basic protection needs',
-      setupFee: '$1,000 setup fee'
+      setupFee: 'Setup fee applies'
     },
     {
       name: 'Advanced Security',
       description: 'Comprehensive security solution for growing businesses',
-      price: '$1,500',
-      rwfPrice: '1,500,000 RWF',
+      price: 'Most Popular',
+      rwfPrice: 'Contact for Quote',
       duration: 'per month',
       popular: true,
       features: [
@@ -47,13 +47,13 @@ const CybersecurityPricing: React.FC = () => {
         'Staff security training'
       ],
       ideal: 'Growing businesses, medium enterprises, compliance requirements',
-      setupFee: '$2,500 setup fee'
+      setupFee: 'Setup fee applies'
     },
     {
       name: 'Enterprise Security',
       description: 'Full-scale security operations for large organizations',
-      price: '$5,000',
-      rwfPrice: '5,000,000 RWF',
+      price: 'Enterprise',
+      rwfPrice: 'Contact for Quote',
       duration: 'per month',
       popular: false,
       features: [
@@ -71,44 +71,44 @@ const CybersecurityPricing: React.FC = () => {
         'Emergency response hotline'
       ],
       ideal: 'Large enterprises, government, critical infrastructure',
-      setupFee: '$10,000 setup fee'
+      setupFee: 'Setup fee applies'
     }
   ];
 
   const oneTimeServices = [
     { 
       name: 'Security Assessment', 
-      price: 'From $2,000', 
+      price: 'Quote on Request', 
       description: 'Comprehensive evaluation of your security posture',
       duration: '2-3 weeks'
     },
     { 
       name: 'Penetration Testing', 
-      price: 'From $3,000', 
+      price: 'Quote on Request', 
       description: 'Ethical hacking to identify vulnerabilities',
       duration: '1-2 weeks'
     },
     { 
       name: 'ISO 27001 Implementation', 
-      price: 'From $15,000', 
+      price: 'Quote on Request', 
       description: 'Complete ISO 27001 certification process',
       duration: '6-12 months'
     },
     { 
       name: 'Incident Response', 
-      price: 'From $5,000', 
+      price: 'Quote on Request', 
       description: 'Emergency cybersecurity incident handling',
       duration: 'Immediate'
     },
     { 
       name: 'Security Training', 
-      price: 'From $1,000', 
+      price: 'Quote on Request', 
       description: 'Staff cybersecurity awareness programs',
       duration: '1-2 days'
     },
     { 
       name: 'Compliance Audit', 
-      price: 'From $2,500', 
+      price: 'Quote on Request', 
       description: 'Regulatory compliance assessment',
       duration: '2-4 weeks'
     }
@@ -118,19 +118,19 @@ const CybersecurityPricing: React.FC = () => {
     {
       title: 'Data Breach Response',
       description: 'Immediate response to data breaches and cyber incidents',
-      price: '$10,000+',
+      price: 'Emergency Rate',
       responseTime: '< 2 hours'
     },
     {
       title: 'Ransomware Recovery',
       description: 'Complete ransomware incident response and recovery',
-      price: '$15,000+',
+      price: 'Emergency Rate',
       responseTime: '< 1 hour'
     },
     {
       title: 'Forensic Investigation',
       description: 'Digital forensics and incident investigation services',
-      price: '$8,000+',
+      price: 'Emergency Rate',
       responseTime: '< 4 hours'
     }
   ];
@@ -147,7 +147,7 @@ const CybersecurityPricing: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Cybersecurity Pricing Plans
+            Cybersecurity <span className="gradient-text">Pricing</span> Plans
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Transparent pricing for comprehensive cybersecurity protection. Choose the plan that 
@@ -160,11 +160,12 @@ const CybersecurityPricing: React.FC = () => {
           {pricingPlans.map((plan, index) => (
             <motion.div
               key={plan.name}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30, scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              className={`relative bg-white rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 ${
+              transition={{ duration: 0.8, delay: index * 0.1, type: "spring", stiffness: 100 }}
+              whileHover={{ scale: plan.popular ? 1.08 : 1.05, y: -8 }}
+              className={`relative bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-500 border border-transparent hover:border-primary-200 ${
                 plan.popular ? 'ring-2 ring-primary-500 transform scale-105' : ''
               }`}
             >
@@ -234,7 +235,7 @@ const CybersecurityPricing: React.FC = () => {
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              One-Time Security Services
+              One-Time Security <span className="gradient-text">Services</span>
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Specific security services for immediate needs or project-based requirements
@@ -273,7 +274,7 @@ const CybersecurityPricing: React.FC = () => {
           <div className="text-center mb-12">
             <AlertTriangle className="w-16 h-16 mx-auto mb-4 text-red-200" />
             <h3 className="text-3xl font-bold mb-4">
-              Emergency Cybersecurity Services
+              Emergency <span className="text-red-200">Cybersecurity</span> Services
             </h3>
             <p className="text-red-100 text-lg max-w-2xl mx-auto">
               Immediate response services for active cyber threats and security incidents. 

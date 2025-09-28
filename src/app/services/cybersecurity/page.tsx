@@ -8,6 +8,7 @@ import CybersecuritySolutions from '@/components/sections/services/cybersecurity
 import CybersecurityCompliance from '@/components/sections/services/cybersecurity/CybersecurityCompliance';
 import CybersecurityPricing from '@/components/sections/services/cybersecurity/CybersecurityPricing';
 import CallToAction from '@/components/sections/CallToAction';
+import SectionTransition from '@/components/ui/SectionTransition';
 import { generateServiceMetadata, generateServiceStructuredData } from '@/components/seo/ServicePageSEO';
 
 const cybersecurityService = {
@@ -128,28 +129,42 @@ export default function CybersecurityPage() {
           title="Advanced Cybersecurity Services in Rwanda"
           subtitle="Protect your business from cyber threats with ISO 27001 certified security experts. Comprehensive solutions for network security, compliance, and risk management."
           backgroundImage="/cyber_1.jpg"
-          service="Cybersecurity"
+          service="cybersecurity"
         />
+        
+        <SectionTransition variant="wave" color="gray" />
         
         {/* Service Overview */}
         <CybersecurityOverview 
           service={cybersecurityService}
         />
         
+        <SectionTransition variant="curve" color="white" />
+        
         {/* Capabilities & Services */}
         <CybersecurityCapabilities />
+        
+        <SectionTransition variant="diagonal" color="gray" />
         
         {/* Security Solutions */}
         <CybersecuritySolutions />
         
+        <SectionTransition variant="wave" color="white" />
+        
         {/* Security Process */}
         <CybersecurityProcess />
+        
+        <SectionTransition variant="curve" color="gray" />
         
         {/* Compliance & Standards */}
         <CybersecurityCompliance />
         
+        <SectionTransition variant="diagonal" color="white" />
+        
         {/* Pricing Plans */}
         <CybersecurityPricing />
+        
+        <SectionTransition variant="wave" color="primary" />
         
         {/* Call to Action */}
         <CallToAction />

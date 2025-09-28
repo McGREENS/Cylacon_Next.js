@@ -22,7 +22,7 @@ const CybersecurityCompliance: React.FC = () => {
       title: 'ISO 27001',
       subtitle: 'Information Security Management',
       description: 'International standard for information security management systems (ISMS).',
-      color: 'from-blue-500 to-blue-600',
+      color: 'from-primary-500 to-primary-600',
       benefits: [
         'Systematic approach to managing sensitive information',
         'Risk-based security controls',

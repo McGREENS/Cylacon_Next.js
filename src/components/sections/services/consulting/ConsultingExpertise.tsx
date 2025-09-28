@@ -22,7 +22,7 @@ const ConsultingExpertise: React.FC = () => {
     {
       category: 'Digital Transformation',
       icon: <TrendingUp className="w-8 h-8" />,
-      color: 'from-blue-500 to-blue-600',
+      color: 'from-primary-500 to-primary-600',
       capabilities: [
         'Digital strategy development',
         'Process automation',
@@ -35,7 +35,7 @@ const ConsultingExpertise: React.FC = () => {
     {
       category: 'Cloud Strategy',
       icon: <Globe className="w-8 h-8" />,
-      color: 'from-green-500 to-green-600',
+      color: 'from-secondary-500 to-secondary-600',
       capabilities: [
         'Cloud adoption strategy',
         'Multi-cloud architecture',
@@ -48,7 +48,7 @@ const ConsultingExpertise: React.FC = () => {
     {
       category: 'Cybersecurity Strategy',
       icon: <Shield className="w-8 h-8" />,
-      color: 'from-red-500 to-red-600',
+      color: 'from-primary-600 to-secondary-600',
       capabilities: [
         'Security strategy development',
         'Risk assessment frameworks',
@@ -61,7 +61,7 @@ const ConsultingExpertise: React.FC = () => {
     {
       category: 'Data & Analytics',
       icon: <BarChart3 className="w-8 h-8" />,
-      color: 'from-purple-500 to-purple-600',
+      color: 'from-accent-500 to-accent-600',
       capabilities: [
         'Data strategy development',
         'Analytics roadmap',
@@ -139,11 +139,11 @@ const ConsultingExpertise: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Our Consulting Expertise & Team
+            Our <span className="gradient-text">Consulting Expertise</span> & Team
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Our team of certified consultants brings deep expertise across multiple domains, 
@@ -159,8 +159,8 @@ const ConsultingExpertise: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="bg-gray-50 rounded-3xl p-8 hover:shadow-lg transition-shadow duration-300"
+              transition={{ duration: 0.8, delay: index * 0.1, type: "spring", stiffness: 100 }}
+              className="bg-gray-50 rounded-3xl p-8 hover:shadow-lg transition-all duration-300 hover:scale-105 hover:-translate-y-2 border border-transparent hover:border-primary-200"
             >
               <div className="flex items-center mb-6">
                 <div className={`w-16 h-16 bg-gradient-to-br ${area.color} rounded-2xl flex items-center justify-center mr-4`}>
@@ -188,12 +188,12 @@ const ConsultingExpertise: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8, delay: 0.4, type: "spring", stiffness: 100 }}
           className="bg-gray-50 rounded-3xl p-8 md:p-12 mb-20"
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Meet Our Consulting Team
+              Meet Our <span className="gradient-text">Consulting Team</span>
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Our multidisciplinary team combines technical expertise with business acumen 
@@ -209,7 +209,7 @@ const ConsultingExpertise: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 text-center shadow-md hover:shadow-lg transition-shadow duration-300"
+                className="bg-white rounded-2xl p-6 text-center shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 hover:-translate-y-2 border border-transparent hover:border-primary-200"
               >
                 <div className="w-14 h-14 bg-primary-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <div className="text-primary-600">
@@ -236,12 +236,12 @@ const ConsultingExpertise: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.8, delay: 0.6, type: "spring", stiffness: 100 }}
           className="bg-white rounded-3xl p-8 md:p-12 shadow-lg mb-20"
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Client Success Stories
+              Client <span className="gradient-text">Success Stories</span>
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Our consulting engagements deliver measurable results that transform businesses 
@@ -257,7 +257,7 @@ const ConsultingExpertise: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gray-50 rounded-2xl p-6"
+                className="bg-gray-50 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 hover:scale-105 hover:-translate-y-2 border border-transparent hover:border-primary-200"
               >
                 <div className="flex items-center mb-4">
                   <div className="w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center mr-3">
@@ -292,11 +292,11 @@ const ConsultingExpertise: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          transition={{ duration: 0.8, delay: 0.8, type: "spring", stiffness: 100 }}
           className="bg-gradient-to-br from-primary-600 to-secondary-600 rounded-3xl p-8 md:p-12 text-white text-center"
         >
           <Lightbulb className="w-16 h-16 mx-auto mb-6 text-primary-200" />
-          <h3 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h3>
+          <h3 className="text-3xl font-bold mb-4">Ready to <span className="text-primary-200">Transform</span> Your Business?</h3>
           <p className="text-primary-100 text-lg mb-8 max-w-2xl mx-auto">
             Let our expert consultants guide your technology journey. Schedule a consultation 
             to discuss your challenges and explore how we can help you achieve your goals.

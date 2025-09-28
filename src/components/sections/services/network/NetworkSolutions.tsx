@@ -36,7 +36,7 @@ const NetworkSolutions: React.FC = () => {
         'Improved patient care coordination',
         'Regulatory compliance'
       ],
-      color: 'from-red-500 to-pink-500'
+      color: 'from-primary-500 to-secondary-500'
     },
     {
       icon: <Landmark className="w-8 h-8" />,
@@ -55,7 +55,7 @@ const NetworkSolutions: React.FC = () => {
         'Secure mobile banking',
         'PCI DSS compliance'
       ],
-      color: 'from-green-500 to-emerald-500'
+      color: 'from-secondary-500 to-accent-500'
     },
     {
       icon: <Building className="w-8 h-8" />,
@@ -74,7 +74,7 @@ const NetworkSolutions: React.FC = () => {
         'Inter-agency collaboration',
         'Emergency preparedness'
       ],
-      color: 'from-blue-500 to-indigo-500'
+      color: 'from-primary-600 to-secondary-600'
     },
     {
       icon: <GraduationCap className="w-8 h-8" />,
@@ -93,7 +93,7 @@ const NetworkSolutions: React.FC = () => {
         'Digital education support',
         'Administrative efficiency'
       ],
-      color: 'from-purple-500 to-violet-500'
+      color: 'from-accent-500 to-primary-500'
     }
   ];
 
@@ -132,11 +132,11 @@ const NetworkSolutions: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Industry-Specific Network Solutions
+            Industry-Specific <span className="gradient-text">Network Solutions</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Every industry has unique networking requirements. We design and implement 
@@ -152,8 +152,8 @@ const NetworkSolutions: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+              transition={{ duration: 0.8, delay: index * 0.1, type: "spring", stiffness: 100 }}
+              className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:-translate-y-2 border border-transparent hover:border-primary-200"
             >
               {/* Industry Image */}
               <div className={`h-48 bg-gradient-to-br ${solution.color} relative overflow-hidden`}>
@@ -212,12 +212,12 @@ const NetworkSolutions: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8, delay: 0.4, type: "spring", stiffness: 100 }}
           className="bg-white rounded-3xl p-8 md:p-12 shadow-lg mb-20"
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Network Infrastructure Types We Deploy
+              <span className="gradient-text">Network Infrastructure</span> Types We Deploy
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               From local area networks to complex data center infrastructures, 
@@ -260,11 +260,11 @@ const NetworkSolutions: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.8, delay: 0.6, type: "spring", stiffness: 100 }}
           className="bg-gradient-to-br from-primary-600 to-secondary-600 rounded-3xl p-8 md:p-12 text-white text-center"
         >
           <Users className="w-16 h-16 mx-auto mb-6 text-primary-200" />
-          <h3 className="text-3xl font-bold mb-4">Network Solutions for SMEs in Rwanda</h3>
+          <h3 className="text-3xl font-bold mb-4"><span className="text-primary-200">Network Solutions</span> for SMEs in Rwanda</h3>
           <p className="text-primary-100 text-lg mb-8 max-w-2xl mx-auto">
             We understand that small and medium enterprises need enterprise-grade networking 
             at affordable prices. Our SME solutions are designed to grow with your business.

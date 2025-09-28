@@ -72,7 +72,7 @@ const CustomSoftwareSolutions: React.FC = () => {
         'Improved productivity',
         'Cost reduction'
       ],
-      color: 'from-blue-500 to-indigo-500'
+      color: 'from-secondary-500 to-secondary-600'
     },
     {
       icon: <GraduationCap className="w-8 h-8" />,
@@ -91,7 +91,7 @@ const CustomSoftwareSolutions: React.FC = () => {
         'Remote learning capabilities',
         'Progress tracking'
       ],
-      color: 'from-purple-500 to-violet-500'
+      color: 'from-accent-500 to-accent-600'
     }
   ];
 
@@ -134,7 +134,7 @@ const CustomSoftwareSolutions: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Industry-Specific Software Solutions
+            Industry-Specific <span className="gradient-text">Software Solutions</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             We build custom software solutions tailored to the unique needs of different industries. 
@@ -215,7 +215,7 @@ const CustomSoftwareSolutions: React.FC = () => {
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Types of Software We Develop
+              Types of <span className="gradient-text">Software</span> We Develop
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               From web applications to mobile apps, we build software solutions 

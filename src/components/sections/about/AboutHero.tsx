@@ -42,7 +42,7 @@ const AboutHero: React.FC = () => {
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight max-w-4xl mx-auto"
           >
             Transforming Businesses Through{' '}
-            <span className="text-primary-400">Technology Excellence</span>
+            <span className="gradient-text">Technology Excellence</span>
           </motion.h1>
 
           {/* Subtitle */}
@@ -61,7 +61,7 @@ const AboutHero: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
+            transition={{ delay: 0.5, staggerChildren: 0.1 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto pt-8"
           >
             <div className="text-center">

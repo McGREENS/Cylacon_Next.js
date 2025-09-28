@@ -34,7 +34,7 @@ const HospitalitySolutions: React.FC = () => {
         'Efficient resource management',
         'Enhanced service delivery'
       ],
-      color: 'from-blue-500 to-blue-600'
+      color: 'from-primary-500 to-primary-600'
     },
     {
       icon: <Utensils className="w-8 h-8" />,
@@ -134,7 +134,7 @@ const HospitalitySolutions: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Comprehensive Hospitality IT Solutions
+            Comprehensive <span className="gradient-text">Hospitality IT Solutions</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             From boutique hotels to large resorts, we provide end-to-end digital solutions 
@@ -194,7 +194,7 @@ const HospitalitySolutions: React.FC = () => {
                   <div className="space-y-2">
                     {solution.benefits.map((benefit, benefitIndex) => (
                       <div key={benefitIndex} className="flex items-center space-x-2">
-                        <Zap className="w-4 h-4 text-blue-500 flex-shrink-0" />
+                        <Zap className="w-4 h-4 text-primary-500 flex-shrink-0" />
                         <span className="text-sm text-gray-600">{benefit}</span>
                       </div>
                     ))}
@@ -215,7 +215,7 @@ const HospitalitySolutions: React.FC = () => {
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Specialized Hospitality Solutions
+              Specialized <span className="gradient-text">Hospitality Solutions</span>
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Advanced hospitality technology solutions designed for specific operational needs 
@@ -233,8 +233,8 @@ const HospitalitySolutions: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white rounded-2xl p-6 text-center shadow-md hover:shadow-lg transition-shadow duration-300"
               >
-                <div className="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <div className="text-green-600">
+                <div className="w-14 h-14 bg-primary-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <div className="text-primary-600">
                     {solution.icon}
                   </div>
                 </div>
@@ -243,7 +243,7 @@ const HospitalitySolutions: React.FC = () => {
                 
                 <div className="space-y-1">
                   {solution.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="text-xs text-green-600 font-medium">
+                    <div key={featureIndex} className="text-xs text-primary-600 font-medium">
                       • {feature}
                     </div>
                   ))}
@@ -259,11 +259,11 @@ const HospitalitySolutions: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="bg-gradient-to-br from-green-600 to-blue-600 rounded-3xl p-8 md:p-12 text-white text-center"
+          className="bg-gradient-to-br from-primary-600 to-secondary-600 rounded-3xl p-8 md:p-12 text-white text-center"
         >
-          <Hotel className="w-16 h-16 mx-auto mb-6 text-green-200" />
-          <h3 className="text-3xl font-bold mb-4">Supporting Rwanda's Tourism Excellence</h3>
-          <p className="text-green-100 text-lg mb-8 max-w-2xl mx-auto">
+          <Hotel className="w-16 h-16 mx-auto mb-6 text-primary-200" />
+          <h3 className="text-3xl font-bold mb-4">Supporting Rwanda's <span className="gradient-text">Tourism Excellence</span></h3>
+          <p className="text-primary-100 text-lg mb-8 max-w-2xl mx-auto">
             We're proud to support Rwanda's hospitality sector with innovative technology solutions. 
             From luxury lodges to urban hotels, we help businesses deliver world-class guest experiences.
           </p>
@@ -271,18 +271,18 @@ const HospitalitySolutions: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="text-3xl font-bold mb-2">100+</div>
-              <div className="text-green-200">Hotels & Restaurants</div>
-              <div className="text-sm text-green-100">Successfully digitized</div>
+              <div className="text-primary-200">Hotels & Restaurants</div>
+              <div className="text-sm text-primary-100">Successfully digitized</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold mb-2">45%</div>
-              <div className="text-green-200">Guest Satisfaction</div>
-              <div className="text-sm text-green-100">Average improvement achieved</div>
+              <div className="text-primary-200">Guest Satisfaction</div>
+              <div className="text-sm text-primary-100">Average improvement achieved</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold mb-2">99.9%</div>
-              <div className="text-green-200">System Uptime</div>
-              <div className="text-sm text-green-100">Reliable hospitality operations</div>
+              <div className="text-primary-200">System Uptime</div>
+              <div className="text-sm text-primary-100">Reliable hospitality operations</div>
             </div>
           </div>
         </motion.div>

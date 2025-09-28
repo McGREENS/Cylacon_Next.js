@@ -168,7 +168,7 @@ const CustomSoftwareProcess: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Our Software Development Process
+            Our Software Development <span className="gradient-text">Process</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             We follow a proven, collaborative development process that ensures your custom software 
@@ -260,7 +260,7 @@ const CustomSoftwareProcess: React.FC = () => {
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Why Our Process Works
+              Why Our Process <span className="gradient-text">Works</span>
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Our proven development methodology ensures successful project delivery 

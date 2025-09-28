@@ -100,11 +100,11 @@ const ConsultingOverview: React.FC<ConsultingOverviewProps> = ({ service }) => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Strategic IT Consulting for Rwanda
+            Strategic <span className="gradient-text">IT Consulting</span> for Rwanda
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             {service.description}. We help businesses across Rwanda and East Africa navigate 
@@ -117,13 +117,13 @@ const ConsultingOverview: React.FC<ConsultingOverviewProps> = ({ service }) => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-8 md:p-12 mb-16 border border-blue-100"
+          transition={{ duration: 0.8, delay: 0.2, type: "spring", stiffness: 100 }}
+          className="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-3xl p-8 md:p-12 mb-16 border border-primary-100"
         >
           <div className="text-center mb-8">
-            <Globe className="w-16 h-16 text-blue-500 mx-auto mb-4" />
+            <Globe className="w-16 h-16 text-primary-500 mx-auto mb-4" />
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Rwanda's Digital Transformation Opportunity
+              Rwanda's <span className="gradient-text">Digital Transformation</span> Opportunity
             </h3>
             <p className="text-gray-700 max-w-2xl mx-auto">
               As Rwanda positions itself as a digital hub in East Africa, businesses need strategic 
@@ -134,7 +134,7 @@ const ConsultingOverview: React.FC<ConsultingOverviewProps> = ({ service }) => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {rwandaContext.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">{stat.number}</div>
+                <div className="text-3xl font-bold text-primary-600 mb-2">{stat.number}</div>
                 <div className="text-gray-700 font-medium">{stat.label}</div>
                 <div className="text-sm text-gray-600">{stat.description}</div>
               </div>
@@ -151,7 +151,7 @@ const ConsultingOverview: React.FC<ConsultingOverviewProps> = ({ service }) => {
             transition={{ duration: 0.6 }}
             className="text-2xl font-bold text-gray-900 mb-12 text-center"
           >
-            How We Can Guide Your Technology Journey
+            How We Can Guide Your <span className="gradient-text">Technology Journey</span>
           </motion.h3>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -161,8 +161,8 @@ const ConsultingOverview: React.FC<ConsultingOverviewProps> = ({ service }) => {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 group"
+                transition={{ duration: 0.8, delay: index * 0.1, type: "spring", stiffness: 100 }}
+                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105 hover:-translate-y-2 border border-transparent hover:border-primary-200"
               >
                 <div className="w-14 h-14 bg-primary-100 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-primary-200 transition-colors duration-300">
                   <div className="text-primary-600 group-hover:scale-110 transition-transform duration-300">
@@ -181,12 +181,12 @@ const ConsultingOverview: React.FC<ConsultingOverviewProps> = ({ service }) => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8, delay: 0.4, type: "spring", stiffness: 100 }}
           className="bg-white rounded-3xl p-8 md:p-12 shadow-lg"
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Why Choose CyLaCon for IT Consulting?
+              Why Choose <span className="gradient-text">CyLaCon</span> for IT Consulting?
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Our ISO 27001 certified consultants bring deep technical expertise and local market 
@@ -222,11 +222,11 @@ const ConsultingOverview: React.FC<ConsultingOverviewProps> = ({ service }) => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.8, delay: 0.6, type: "spring", stiffness: 100 }}
           className="mt-20 bg-gradient-to-br from-primary-600 to-secondary-600 rounded-3xl p-8 md:p-12 text-white"
         >
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold mb-4">Our Consulting Approach</h3>
+            <h3 className="text-3xl font-bold mb-4">Our <span className="text-primary-200">Consulting</span> Approach</h3>
             <p className="text-primary-100 text-lg">
               We combine global best practices with local market insights to deliver 
               consulting services that truly understand your business context.

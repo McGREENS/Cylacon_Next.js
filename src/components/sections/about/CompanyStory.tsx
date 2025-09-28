@@ -62,7 +62,7 @@ const CompanyStory: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Our Growth Story
+            Our Growth <span className="gradient-text">Story</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             From a small startup in Kigali to Rwanda's leading IT company. 
@@ -79,17 +79,18 @@ const CompanyStory: React.FC = () => {
             {timeline.map((item, index) => (
               <motion.div
                 key={`${item.year}-${item.title}`}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition={{ duration: 0.8, delay: index * 0.1, type: "spring", stiffness: 80 }}
+                whileHover={{ scale: 1.02, y: -5 }}
                 className={`flex flex-col lg:flex-row items-center ${
                   index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
                 } gap-8`}
               >
                 {/* Content */}
                 <div className={`flex-1 ${index % 2 === 0 ? 'lg:text-right' : 'lg:text-left'}`}>
-                  <div className="bg-gray-50 rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div className="bg-gray-50 rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-500 hover:bg-white border border-transparent hover:border-primary-200">
                     <div className="flex items-center mb-4 justify-center lg:justify-start">
                       <span className="text-2xl font-bold text-primary-600 mr-3">{item.year}</span>
                       <h3 className="text-xl font-bold text-gray-900">{item.title}</h3>
@@ -121,7 +122,7 @@ const CompanyStory: React.FC = () => {
           className="mt-20 bg-gradient-to-br from-primary-50 to-secondary-50 rounded-3xl p-8 md:p-12"
         >
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Our Growth in Numbers</h3>
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">Our Growth in <span className="gradient-text">Numbers</span></h3>
             <p className="text-gray-600 text-lg">
               Consistent growth and expansion across East Africa
             </p>

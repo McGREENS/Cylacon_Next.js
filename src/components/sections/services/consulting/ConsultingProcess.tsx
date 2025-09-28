@@ -166,11 +166,11 @@ const ConsultingProcess: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Our Proven Consulting Methodology
+            Our Proven <span className="gradient-text">Consulting Methodology</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             We follow a structured, collaborative approach that ensures your technology strategy 
@@ -190,14 +190,14 @@ const ConsultingProcess: React.FC = () => {
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition={{ duration: 0.8, delay: index * 0.1, type: "spring", stiffness: 100 }}
                 className={`flex flex-col lg:flex-row items-center ${
                   index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
                 } gap-8`}
               >
                 {/* Content */}
                 <div className={`flex-1 ${index % 2 === 0 ? 'lg:text-right' : 'lg:text-left'}`}>
-                  <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:-translate-y-2 border border-transparent hover:border-primary-200">
                     <div className="flex items-center mb-4 justify-center lg:justify-start">
                       <span className="text-3xl font-bold text-primary-600 mr-4">{step.step}</span>
                       <h3 className="text-2xl font-bold text-gray-900">{step.title}</h3>
@@ -257,12 +257,12 @@ const ConsultingProcess: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8, delay: 0.4, type: "spring", stiffness: 100 }}
           className="bg-white rounded-3xl p-8 md:p-12 shadow-lg"
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Why Our Consulting Process Works
+              Why Our <span className="gradient-text">Consulting Process</span> Works
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Our methodology is designed to deliver practical, actionable results 
@@ -297,11 +297,11 @@ const ConsultingProcess: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.8, delay: 0.6, type: "spring", stiffness: 100 }}
           className="mt-20 bg-gradient-to-br from-primary-600 to-secondary-600 rounded-3xl p-8 md:p-12 text-white text-center"
         >
           <Target className="w-16 h-16 mx-auto mb-6 text-primary-200" />
-          <h3 className="text-3xl font-bold mb-4">Our Consulting Commitment</h3>
+          <h3 className="text-3xl font-bold mb-4">Our <span className="text-primary-200">Consulting</span> Commitment</h3>
           <p className="text-primary-100 text-lg mb-8 max-w-2xl mx-auto">
             We're committed to your success. Our consulting engagements are designed to deliver 
             measurable results and long-term value for your organization.

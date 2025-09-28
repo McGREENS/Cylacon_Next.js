@@ -22,7 +22,7 @@ const Industry4Solutions: React.FC = () => {
     {
       category: 'Smart Factory Automation',
       icon: <Bot className="w-8 h-8" />,
-      color: 'from-blue-500 to-blue-600',
+      color: 'from-primary-500 to-primary-600',
       backgroundImage: 'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400',
       capabilities: [
         'Automated production lines',
@@ -143,7 +143,7 @@ const Industry4Solutions: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Industry 4.0 & Smart Manufacturing Solutions
+            <span className="gradient-text">Industry 4.0</span> & Smart Manufacturing Solutions
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Transform your manufacturing operations with cutting-edge Industry 4.0 technologies 
@@ -205,7 +205,7 @@ const Industry4Solutions: React.FC = () => {
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Industry 4.0 Implementation Roadmap
+              <span className="gradient-text">Industry 4.0</span> Implementation Roadmap
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Our systematic approach ensures successful Industry 4.0 transformation 
@@ -223,8 +223,8 @@ const Industry4Solutions: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <div className="text-blue-600">
+                <div className="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <div className="text-primary-600">
                     {phase.icon}
                   </div>
                 </div>
@@ -233,7 +233,7 @@ const Industry4Solutions: React.FC = () => {
                 
                 <div className="space-y-1">
                   {phase.activities.map((activity, activityIndex) => (
-                    <div key={activityIndex} className="text-xs text-blue-600 font-medium">
+                    <div key={activityIndex} className="text-xs text-primary-600 font-medium">
                       • {activity}
                     </div>
                   ))}
@@ -253,7 +253,7 @@ const Industry4Solutions: React.FC = () => {
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Industry 4.0 Business Benefits
+              <span className="gradient-text">Industry 4.0</span> Business Benefits
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Discover the transformative benefits of Industry 4.0 technologies 
@@ -271,8 +271,8 @@ const Industry4Solutions: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
               >
-                <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
-                  <div className="text-green-600">
+                <div className="w-12 h-12 bg-secondary-100 rounded-xl flex items-center justify-center mb-4">
+                  <div className="text-secondary-600">
                     {benefit.icon}
                   </div>
                 </div>
@@ -281,7 +281,7 @@ const Industry4Solutions: React.FC = () => {
                 
                 <div className="space-y-1">
                   {benefit.impact.map((impact, impactIndex) => (
-                    <div key={impactIndex} className="text-xs text-green-600 font-medium">
+                    <div key={impactIndex} className="text-xs text-secondary-600 font-medium">
                       • {impact}
                     </div>
                   ))}

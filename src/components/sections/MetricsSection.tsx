@@ -49,9 +49,9 @@ const MetricsSection: React.FC = () => {
       suffix: '+',
       label: 'Happy Clients',
       description: 'Satisfied clients across Rwanda and East Africa',
-      color: 'from-blue-500 to-cyan-500',
-      bgColor: 'bg-blue-50',
-      iconColor: 'text-blue-500'
+      color: 'from-primary-500 to-secondary-500',
+      bgColor: 'bg-primary-50',
+      iconColor: 'text-primary-500'
     },
     {
       icon: Clock,

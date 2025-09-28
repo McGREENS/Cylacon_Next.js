@@ -22,7 +22,7 @@ const CybersecurityCapabilities: React.FC = () => {
     {
       category: 'Network Security',
       icon: <Wifi className="w-8 h-8" />,
-      color: 'from-blue-500 to-blue-600',
+      color: 'from-primary-500 to-primary-600',
       capabilities: [
         'Firewall Configuration & Management',
         'Intrusion Detection Systems (IDS)',
@@ -124,7 +124,7 @@ const CybersecurityCapabilities: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Our Cybersecurity Capabilities
+            Our Cybersecurity <span className="gradient-text">Capabilities</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             We provide end-to-end cybersecurity solutions covering every aspect of your digital infrastructure. 
@@ -137,11 +137,12 @@ const CybersecurityCapabilities: React.FC = () => {
           {securityDomains.map((domain, index) => (
             <motion.div
               key={domain.category}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30, scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="bg-gray-50 rounded-3xl p-8 hover:shadow-lg transition-shadow duration-300"
+              transition={{ duration: 0.8, delay: index * 0.1, type: "spring", stiffness: 100 }}
+              whileHover={{ scale: 1.02, y: -5 }}
+              className="bg-gray-50 rounded-3xl p-8 hover:shadow-xl transition-all duration-500 border border-transparent hover:border-primary-200"
             >
               <div className="flex items-center mb-6">
                 <div className={`w-16 h-16 bg-gradient-to-br ${domain.color} rounded-2xl flex items-center justify-center mr-4`}>
@@ -174,7 +175,7 @@ const CybersecurityCapabilities: React.FC = () => {
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Comprehensive Security Services
+              Comprehensive Security <span className="gradient-text">Services</span>
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               From assessment to implementation, we provide complete cybersecurity solutions 
@@ -225,7 +226,7 @@ const CybersecurityCapabilities: React.FC = () => {
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Tailored for Rwanda's Digital Landscape
+              Tailored for Rwanda's <span className="gradient-text">Digital Landscape</span>
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               We understand the unique cybersecurity challenges facing Rwandan businesses 

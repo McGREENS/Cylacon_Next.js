@@ -82,7 +82,7 @@ const ServiceProcess: React.FC<ServiceProcessProps> = ({ service }) => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Our Web Development Process
+            Our Web Development <span className="gradient-text">Process</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             We follow a proven, systematic approach to deliver high-quality websites on time and within budget. 
@@ -99,17 +99,18 @@ const ServiceProcess: React.FC<ServiceProcessProps> = ({ service }) => {
             {processSteps.map((step, index) => (
               <motion.div
                 key={step.step}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition={{ duration: 0.8, delay: index * 0.1, type: "spring", stiffness: 80 }}
+                whileHover={{ scale: 1.02, y: -5 }}
                 className={`flex flex-col lg:flex-row items-center ${
                   index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
                 } gap-8`}
               >
                 {/* Content */}
                 <div className={`flex-1 ${index % 2 === 0 ? 'lg:text-right' : 'lg:text-left'}`}>
-                  <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 border border-transparent hover:border-primary-200">
                     <div className="flex items-center mb-4 justify-center lg:justify-start">
                       <span className="text-3xl font-bold text-primary-600 mr-4">{step.step}</span>
                       <h3 className="text-2xl font-bold text-gray-900">{step.title}</h3>
@@ -158,7 +159,7 @@ const ServiceProcess: React.FC<ServiceProcessProps> = ({ service }) => {
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Why Our Process Works
+              Why Our Process <span className="gradient-text">Works</span>
             </h3>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Our structured approach ensures project success and client satisfaction

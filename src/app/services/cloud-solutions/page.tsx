@@ -8,6 +8,7 @@ import CloudMigration from '@/components/sections/services/cloud/CloudMigration'
 import CloudSecurity from '@/components/sections/services/cloud/CloudSecurity';
 import CloudPricing from '@/components/sections/services/cloud/CloudPricing';
 import CallToAction from '@/components/sections/CallToAction';
+import SectionTransition from '@/components/ui/SectionTransition';
 
 const cloudService = {
   name: 'Cloud Solutions',
@@ -127,28 +128,42 @@ export default function CloudSolutionsPage() {
           title="Advanced Cloud Solutions for Rwanda's Digital Future"
           subtitle="Accelerate your digital transformation with scalable cloud infrastructure, expert migration services, and 24/7 managed cloud solutions."
           backgroundImage="/cloud_1.jpg"
-          service="Cloud Solutions"
+          service="cloud-solutions"
         />
+        
+        <SectionTransition variant="wave" color="gray" />
         
         {/* Service Overview */}
         <CloudOverview 
           service={cloudService}
         />
         
+        <SectionTransition variant="curve" color="white" />
+        
         {/* Cloud Capabilities */}
         <CloudCapabilities />
+        
+        <SectionTransition variant="diagonal" color="gray" />
         
         {/* Cloud Services */}
         <CloudServices />
         
+        <SectionTransition variant="wave" color="white" />
+        
         {/* Cloud Migration */}
         <CloudMigration />
+        
+        <SectionTransition variant="curve" color="gray" />
         
         {/* Cloud Security */}
         <CloudSecurity />
         
+        <SectionTransition variant="diagonal" color="white" />
+        
         {/* Pricing Plans */}
         <CloudPricing />
+        
+        <SectionTransition variant="wave" color="primary" />
         
         {/* Call to Action */}
         <CallToAction />

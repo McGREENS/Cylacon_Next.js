@@ -6,6 +6,7 @@ import ConsultingServices from '@/components/sections/services/consulting/Consul
 import ConsultingProcess from '@/components/sections/services/consulting/ConsultingProcess';
 import ConsultingExpertise from '@/components/sections/services/consulting/ConsultingExpertise';
 import CallToAction from '@/components/sections/CallToAction';
+import SectionTransition from '@/components/ui/SectionTransition';
 
 const consultingService = {
   name: 'IT Consulting Services',
@@ -125,22 +126,32 @@ export default function ConsultingPage() {
           title="Strategic IT Consulting for Rwanda's Digital Future"
           subtitle="Navigate your digital transformation with expert guidance. We help businesses make informed technology decisions that drive growth and innovation."
           backgroundImage="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080"
-          service="IT Consulting Services"
+          service="consulting"
         />
+        
+        <SectionTransition variant="wave" color="gray" />
         
         {/* Service Overview */}
         <ConsultingOverview 
           service={consultingService}
         />
         
+        <SectionTransition variant="curve" color="white" />
+        
         {/* Consulting Services */}
         <ConsultingServices />
+        
+        <SectionTransition variant="diagonal" color="gray" />
         
         {/* Consulting Process */}
         <ConsultingProcess />
         
+        <SectionTransition variant="wave" color="white" />
+        
         {/* Consulting Expertise */}
         <ConsultingExpertise />
+        
+        <SectionTransition variant="curve" color="primary" />
         
         {/* Call to Action */}
         <CallToAction />
