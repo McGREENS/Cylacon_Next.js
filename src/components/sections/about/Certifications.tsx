@@ -62,7 +62,7 @@ const Certifications: React.FC = () => {
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
+        {/* Section Header with Highlighted Text */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -70,10 +70,53 @@ const Certifications: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Certifications & <span className="gradient-text">Partnerships</span>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <motion.div className="space-y-4">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2, duration: 0.8 }}
+              className="text-3xl md:text-4xl font-bold leading-tight"
+            >
+              <motion.span
+                className="text-gray-900"
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 }}
+              >
+                Certifications &{' '}
+              </motion.span>
+              <motion.span
+                className="bg-gradient-to-r from-primary-600 via-primary-500 to-primary-400 bg-clip-text text-transparent"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.4, duration: 0.8, type: "spring" }}
+                whileHover={{ scale: 1.05 }}
+              >
+                Partnerships
+              </motion.span>
+            </motion.h2>
+
+            {/* Animated Text Decoration */}
+            <motion.div
+              className="relative max-w-lg mx-auto"
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+            >
+              <div className="h-1 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full" />
+              <motion.div
+                className="absolute top-0 left-0 h-1 bg-gradient-to-r from-primary-400 to-primary-500 rounded-full"
+                animate={{ x: [0, 180, 0] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                style={{ width: '60px' }}
+              />
+            </motion.div>
+          </motion.div>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mt-6">
             Our certifications and strategic partnerships ensure we deliver world-class 
             solutions with the highest standards of quality and security.
           </p>
@@ -129,9 +172,52 @@ const Certifications: React.FC = () => {
           className="bg-gradient-to-br from-gray-50 to-primary-50 rounded-3xl p-8 md:p-12"
         >
           <div className="text-center mb-12">
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-              Strategic Technology <span className="gradient-text">Partnerships</span>
-            </h3>
+            <motion.div className="space-y-4">
+              <motion.h3
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2, duration: 0.8 }}
+                className="text-2xl md:text-3xl font-bold leading-tight"
+              >
+                <motion.span
+                  className="text-gray-900"
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.3 }}
+                >
+                  Strategic Technology{' '}
+                </motion.span>
+                <motion.span
+                  className="bg-gradient-to-r from-primary-600 via-primary-500 to-primary-400 bg-clip-text text-transparent"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.4, duration: 0.8, type: "spring" }}
+                  whileHover={{ scale: 1.05 }}
+                >
+                  Partnerships
+                </motion.span>
+              </motion.h3>
+
+              {/* Animated Text Decoration */}
+              <motion.div
+                className="relative max-w-lg mx-auto"
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.6, duration: 0.8 }}
+              >
+                <div className="h-1 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full" />
+                <motion.div
+                  className="absolute top-0 left-0 h-1 bg-gradient-to-r from-primary-400 to-primary-500 rounded-full"
+                  animate={{ x: [0, 180, 0] }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                  style={{ width: '60px' }}
+                />
+              </motion.div>
+            </motion.div>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               We partner with leading technology companies to provide our clients 
               with cutting-edge solutions and comprehensive support.
