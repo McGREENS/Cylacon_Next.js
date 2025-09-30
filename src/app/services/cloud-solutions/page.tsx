@@ -8,7 +8,7 @@ import CloudMigration from '@/components/sections/services/cloud/CloudMigration'
 import CloudSecurity from '@/components/sections/services/cloud/CloudSecurity';
 import CloudPricing from '@/components/sections/services/cloud/CloudPricing';
 import CallToAction from '@/components/sections/CallToAction';
-import SectionTransition from '@/components/ui/SectionTransition';
+import SectionTransition, { SectionDivider } from '@/components/ui/SectionTransition';
 
 const cloudService = {
   name: 'Cloud Solutions',
@@ -131,39 +131,37 @@ export default function CloudSolutionsPage() {
           service="cloud-solutions"
         />
         
-        <SectionTransition variant="wave" color="gray" />
+        <SectionDivider type="wave" color="text-gray-50" height="h-16" />
         
         {/* Service Overview */}
         <CloudOverview 
           service={cloudService}
         />
         
-        <SectionTransition variant="curve" color="white" />
+        <SectionDivider type="curve" color="text-white" height="h-16" />
         
         {/* Cloud Capabilities */}
         <CloudCapabilities />
         
-        <SectionTransition variant="diagonal" color="gray" />
+        <SectionDivider type="diagonal" color="text-gray-50" height="h-16" />
         
         {/* Cloud Services */}
         <CloudServices />
-        
-        <SectionTransition variant="wave" color="white" />
+        <SectionDivider type="wave" color="text-white" height="h-16" />
         
         {/* Cloud Migration */}
         <CloudMigration />
         
-        <SectionTransition variant="curve" color="gray" />
+        <SectionDivider type="curve" color="text-primary-50" height="h-16" />
         
         {/* Cloud Security */}
         <CloudSecurity />
         
-        <SectionTransition variant="diagonal" color="white" />
-        
+        <SectionDivider type="diagonal" color="text-white" height="h-16" />
         {/* Pricing Plans */}
         <CloudPricing />
         
-        <SectionTransition variant="wave" color="primary" />
+        <SectionDivider type="wave" color="text-primary-50" height="h-16" />
         
         {/* Call to Action */}
         <CallToAction />

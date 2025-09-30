@@ -75,7 +75,7 @@ export default function HomePage() {
         <SectionDivider type="wave" color="text-white" height="h-20" />
         
         {/* Trust Bar with Slide Transition */}
-        <SectionTransition type="slide" direction="up" delay={0.2} duration={1}>
+        <SectionTransition variant="slide" direction="up" delay={0.2} duration={1}>
           <TrustBar />
         </SectionTransition>
         
@@ -83,7 +83,7 @@ export default function HomePage() {
         <SectionDivider type="curve" color="text-gray-50" height="h-16" />
         
         {/* Services Section with Scale Transition */}
-        <SectionTransition type="scale" delay={0.3} duration={1.2}>
+        <SectionTransition variant="scale" delay={0.3} duration={1.2}>
           <ServicesSection />
         </SectionTransition>
         
@@ -91,7 +91,7 @@ export default function HomePage() {
         <SectionDivider type="wave" color="text-primary-50" height="h-20" flip={true} />
         
         {/* Industry Solutions with Reveal Transition */}
-        <SectionTransition type="reveal" direction="left" delay={0.1} duration={1.5}>
+        <SectionTransition variant="reveal" direction="left" delay={0.1} duration={1.5}>
           <IndustrySolutions />
         </SectionTransition>
         
@@ -99,7 +99,7 @@ export default function HomePage() {
         <SectionDivider type="diagonal" color="text-slate-100" height="h-24" />
         
         {/* Metrics Section with Wave Transition */}
-        <SectionTransition type="wave" delay={0.4} duration={1.8}>
+        <SectionTransition variant="wave" delay={0.4} duration={1.8}>
           <MetricsSection />
         </SectionTransition>
         
@@ -107,7 +107,7 @@ export default function HomePage() {
         <SectionDivider type="zigzag" color="text-primary-100" height="h-16" />
         
         {/* Testimonials Section with Spiral Transition */}
-        <SectionTransition type="spiral" delay={0.2} duration={2}>
+        <SectionTransition variant="spiral" delay={0.2} duration={2}>
           <TestimonialsSection />
         </SectionTransition>
         
